@@ -1,0 +1,1129 @@
+<!doctype html>
+<!-- CLINICA_SAUDE_RELEASE: v9-otimizada-2026-11-22 -->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6fbff">
+  <meta name="clinica-saude-release" content="v9-otimizada-2026-11-22">
+  <meta name="description" content="Clínica SAÚDE: demonstração de central assistencial com modelo isométrico interativo e dados fictícios.">
+  <title>Clínica SAÚDE — Central Assistencial</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNsw61uaWNhIFNBw5pERSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImF6dWwiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOWFkY2Y4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzRjYThkYyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTciIGZpbGw9InVybCgjYXp1bCkiLz4KICA8cmVjdCB4PSIyLjciIHk9IjIuNyIgd2lkdGg9IjU4LjYiIGhlaWdodD0iNTguNiIgcng9IjE2LjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zNSIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KICA8cGF0aCBkPSJNMzIgMTd2MzBNMTcgMzJoMzAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=">
+  <style>
+:root { --background:#f7fafe; --white:#fff; --text:#2c4253; --text-dark:#183548; --muted:#8497a6; --blue:#65b6e7; --blue-2:#88ceef; --blue-pale:#eaf8ff; --border:#e8f0f5; --shadow:0 9px 36px rgba(59,116,150,.055); --mint:#5fb6a2; --rose:#e37d88; --yellow:#e5ab59; font-family: "Nunito", "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif; color:var(--text); }
+* { box-sizing:border-box; } html {scroll-behavior:smooth} body {margin:0; background:var(--background); min-width:320px; } button,input {font:inherit;} button{cursor:pointer;} button:focus-visible,input:focus-visible{outline:3px solid rgba(91,177,235,.45); outline-offset:2px;} svg.icon{height:20px;width:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;} .svg-defs{position:absolute;width:0;height:0;overflow:hidden;} [hidden]{display:none!important}
+.app-shell{min-height:100vh;display:flex;} .sidebar{position:sticky;top:0;height:100vh;flex:0 0 96px;display:flex;flex-direction:column;align-items:center;background:white;border-right:1px solid #ebf1f6;box-shadow:4px 0 21px rgba(69,117,152,.018);z-index:10;} .brand{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;padding:28px 0 22px;} .brand-mark{height:45px;width:45px;border-radius:15px;background:linear-gradient(142deg,#b9e6fc,#6ab9e5);display:grid;place-items:center;color:white;box-shadow:0 8px 20px rgba(101,182,231,.22);position:relative;} .brand-mark:before{position:absolute;content:"";inset:5px;border:1px solid rgba(255,255,255,.55);border-radius:11px;}.brand-mark span{font-size:32px;font-weight:550;line-height:1;transform:translateY(-2px)} .brand-copy{font-size:14px;font-weight:800;letter-spacing:-.6px;color:#3c6480}.brand-copy span{color:#78bee9;font-size:11px;margin-left:1px}.side-divider{height:1px;background:#edf2f6;width:50px;margin-bottom:15px}.side-nav{display:flex;align-items:center;flex-direction:column;gap:14px;width:100%;padding:9px;} .side-item{border:0;background:transparent;border-radius:14px;color:#9aabbb;width:72px;min-height:65px;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:6px;transition:.18s ease;position:relative;} .side-item .icon{width:21px;height:21px;stroke-width:1.75}.side-item span{font-weight:650;font-size:10px;line-height:1}.side-item:hover{background:#f1f9fe;color:#4b9dcc}.side-item.active{background:#e8f6ff;color:#3f9fd6;}.side-item.active:before{content:"";position:absolute;left:-13px;top:17px;height:31px;border-radius:0 4px 4px 0;width:3px;background:#75bbe8;}.sidebar-foot{margin-top:auto;padding:0 0 27px;display:flex;align-items:center;gap:19px;flex-direction:column}.help-dot{border:1.5px solid #d9e6ee;color:#93a9b9;border-radius:50%;width:27px;height:27px;text-align:center;line-height:23px;font-size:15px;font-weight:800}.staff-avatar,.top-avatar{display:grid;place-items:center;border-radius:50%;background:linear-gradient(140deg,#c5e7f7,#8acbeb);color:#387eaa;font-size:12px;font-weight:800;width:39px;height:39px;border:3px solid white;box-shadow:0 0 0 1px #e6eff5}
+.workspace{min-width:0;flex:1}.topbar{height:76px;background:rgba(255,255,255,.87);border-bottom:1px solid #eef3f7;display:flex;align-items:center;justify-content:space-between;padding:0 39px;gap:20px}.crumbs{display:flex;align-items:center;gap:10px;color:#a6b6c3;font-size:12px;font-weight:650;white-space:nowrap}.crumbs .icon{width:14px;height:14px;stroke-width:2}.crumbs strong{color:#6f90a5;font-weight:700}.top-actions{display:flex;align-items:center;gap:19px}.demo-tag{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;letter-spacing:.8px;color:#5aa8c9;background:#edf9ff;border:1px solid #e2f3fc;padding:9px 13px;border-radius:20px;font-weight:850;white-space:nowrap}.demo-tag span{background:#70c5aa;width:6px;height:6px;border-radius:50%;box-shadow:0 0 0 3px #d3f2e9}.datebox{color:#7893a5;font-size:12px;white-space:nowrap}.icon-button{display:grid;place-items:center;background:white;border:1px solid #e7eef3;border-radius:11px;width:38px;height:38px;color:#7898b1;position:relative}.notification-btn i{position:absolute;top:7px;right:8px;width:7px;height:7px;border-radius:50%;background:#e5a1a8;border:2px solid #fff}.top-avatar{width:37px;height:37px}
+.content{max-width:1760px;margin:0 auto;padding:29px 34px 24px}.page-intro{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px;gap:15px}.eyebrow{margin:0 0 8px;letter-spacing:2.1px;color:#6daac8;font-size:10px;font-weight:850}.eyebrow-star{font-size:15px;color:#95d4ef;vertical-align:middle;letter-spacing:0}.eyebrow-muted{color:#b1c5d3}.page-intro h1{color:#293f50;margin:0;font-size:clamp(25px,2.5vw,35px);font-weight:850;letter-spacing:-1.3px;line-height:1.19}.page-intro h1 span{color:#76bce5}.subtitle{margin:8px 0 0;color:#8ca2b2;font-size:13px;line-height:1.5}.intro-right{display:flex;align-items:center;justify-content:center;margin-right:30px;opacity:.9}.notice{display:flex;align-items:center;gap:9px;border:1px solid #d8edf9;background:#edf8fe;color:#729aaf;min-height:39px;border-radius:10px;padding:9px 12px;font-size:11px;margin-bottom:20px}.notice .icon{color:#76b8da;width:17px;height:17px}.notice strong{color:#5a91ae}.notice-close{border:0;background:transparent;color:#a5bfce;margin-left:auto;display:grid;place-items:center;padding:2px}.notice-close .icon{width:15px;height:15px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:19px}.metric{background:white;box-shadow:var(--shadow);border:1px solid var(--border);border-radius:16px;padding:16px 19px 14px;min-height:123px;overflow:hidden;position:relative}.metric:after{position:absolute;content:"";width:95px;height:95px;right:-56px;bottom:-55px;border:14px solid #eff9ff;border-radius:50%}.metric-mint:after{border-color:#effcf8}.metric-yellow:after{border-color:#fff8ec}.metric-rose:after{border-color:#fff1f2}.metric-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;font-size:12px;font-weight:750;color:#7591a3}.metric-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;color:#6db6e3;background:#e9f6ff;flex-shrink:0}.metric-mint .metric-icon{background:#e8f9f4;color:#74c6b1}.metric-yellow .metric-icon{background:#fff5e7;color:#ebbd70}.metric-rose .metric-icon{background:#fff0f1;color:#df9ba2}.metric-icon .icon{height:19px;width:19px}.metric-value{font-size:32px;line-height:1.1;font-weight:850;letter-spacing:-1.3px;color:#2b4b62;margin-top:0}.metric-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:8px}.metric-note{font-size:10.8px;color:#9bb0bf;display:flex;align-items:center;gap:6px}.metric-note:before{content:"";background:#75bfe7;width:6px;height:6px;border-radius:50%}.metric-note.mint-dot:before{background:#7fcebb}.metric-note.yellow-dot:before{background:#edc987}.metric-note.rose-dot:before{background:#e8a0a8}.tiny-deco{font-size:15px;color:#d8edf9}
+.primary-grid{display:grid;grid-template-columns:minmax(0,1.92fr) minmax(340px,1fr);gap:17px;align-items:start}.surface{background:white;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:18px;min-width:0;overflow:hidden}.ward-section{padding:21px 21px 0}.section-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.section-overline{font-size:9px;letter-spacing:1.65px;color:#95b0bf;font-weight:850;margin:0 0 8px;display:flex;align-items:center;gap:7px}.overline-dot{width:7px;height:7px;background:#a6d8f3;border-radius:50%;display:inline-block;box-shadow:0 0 0 3px #e9f6fc}.overline-dot.mint{background:#a0dbc9;box-shadow:0 0 0 3px #e8f8f2}.overline-dot.purple{background:#c4b2ed;box-shadow:0 0 0 3px #f1ecfd}.section-title-group{display:flex;align-items:center;gap:12px;flex-wrap:wrap}h2{font-size:20px;letter-spacing:-.7px;color:#2a4357;font-weight:850;margin:0}.header-badge{font-weight:800;font-size:10px;border-radius:19px;color:#5eafdf;background:#eaf8ff;padding:6px 9px;white-space:nowrap}.badge-spark{font-size:15px;line-height:0}.section-subtitle{margin:7px 0 0;color:#a2b2c0;font-size:11.8px;line-height:1.45}.soft-icon-button{height:34px;width:34px;display:grid;place-items:center;background:#f3faff;border:1px solid #ebf5fb;color:#87b5cd;border-radius:10px}.soft-icon-button .icon{width:18px;height:18px}.map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:18px 0 13px}.search-input{border:1px solid #e4eef5;background:#fcfeff;height:36px;border-radius:9px;display:flex;align-items:center;padding:0 10px;gap:8px;max-width:275px;flex:1}.search-input .icon{height:15px;width:15px;color:#9fb5c6}.search-input input{border:0;outline:none;font-size:11px;color:#416177;min-width:0;width:100%;background:transparent}.search-input input::placeholder{color:#b2c2cd}.view-toggle{display:flex;align-items:center;border:1px solid #e7f0f6;padding:3px;border-radius:10px;gap:1px;white-space:nowrap;background:#fbfdff}.view-option{border:0;background:transparent;border-radius:7px;padding:7px 10px;color:#91a9b9;font-weight:700;font-size:10px}.view-option.active{color:#478ebd;background:#e7f5ff;box-shadow:0 1px 5px rgba(81,146,188,.08)}
+.scene-stage{height:475px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 53% 50%,#faffff 0,#edf9ff 55%,#dff2fc 100%);border:1px solid #dceffa;border-radius:13px;touch-action:pan-y;user-select:none}.scene-stage:before{content:"";position:absolute;inset:0;opacity:.43;pointer-events:none;background-image:radial-gradient(#b4dced 0.8px,transparent .9px);background-size:21px 21px;mask-image:linear-gradient(45deg,transparent,#000 40%,#000 70%,transparent)}.scene-stage:after{content:"";position:absolute;left:1%;right:1%;bottom:-80px;height:130px;background:#d8eef9;border-radius:50%;filter:blur(54px);pointer-events:none}.scene-shine{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.25),transparent 40%)}#hospital3d{position:absolute;inset:0;width:100%;height:100%;cursor:grab;z-index:1;touch-action:none}#hospital3d.dragging{cursor:grabbing}.scene-status-top{position:absolute;top:14px;left:14px;right:14px;z-index:3;display:flex;align-items:center;justify-content:space-between;pointer-events:none}.scene-loc{font-size:9px;letter-spacing:1.2px;font-weight:850;color:#78a5bf;background:rgba(255,255,255,.86);padding:9px 11px;border:1px solid #e5f1f9;border-radius:8px;backdrop-filter:blur(5px)}.location-dot{display:inline-block;width:6px;height:6px;background:#7bc3d9;border-radius:50%;margin-right:5px}.location-slash{color:#c2d7e5;padding:0 5px}.drag-instruction{font-size:10px;color:#93b8c8;background:rgba(255,255,255,.72);padding:7px 10px;border-radius:20px}.scene-actions{position:absolute;right:15px;bottom:51px;z-index:5;display:flex;flex-direction:column;gap:5px}.scene-control{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:rgba(255,255,255,.95);border:1px solid #dfeef7;color:#86acc3;box-shadow:0 2px 7px rgba(47,128,179,.08)}.scene-control:hover{color:#3d9bcc;background:#eef9ff}.scene-control .icon{width:15px;height:15px}.scene-bottom-left{position:absolute;bottom:15px;left:13px;display:flex;gap:12px;z-index:3;background:rgba(255,255,255,.88);border:1px solid #e7f0f6;border-radius:10px;padding:9px 11px}.scene-legend{font-size:9.2px;color:#819caf;font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:5px}.scene-legend i{width:6px;height:6px;border-radius:50%;display:block}.dot-ok{background:#65c5af}.dot-soon{background:#edba6c}.dot-overdue{background:#e58c99}.scene-markers{position:absolute;inset:0;z-index:4;pointer-events:none}.bed-marker{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;border:1px solid #dceff8;background:rgba(255,255,255,.95);color:#658ea4;box-shadow:0 4px 12px rgba(53,102,135,.13);padding:6px 9px;border-radius:8px;display:flex;align-items:center;gap:6px;font-size:9.5px;font-weight:850;white-space:nowrap;transition:background .18s,box-shadow .18s,color .18s}.bed-marker:hover,.bed-marker.active{color:#307fad;box-shadow:0 4px 17px rgba(74,158,218,.26);border-color:#a6dbf6;background:#eafbff}.bed-marker:after{content:"";position:absolute;left:calc(50% - 4px);bottom:-5px;height:7px;width:7px;transform:rotate(45deg);background:inherit;border-bottom:1px solid #dceff8;border-right:1px solid #dceff8}.bed-marker .marker-dot{height:7px;width:7px;border-radius:50%;background:#5dc2aa}.bed-marker.soon .marker-dot{background:#e7b15c}.bed-marker.overdue .marker-dot{background:#df838f}.bed-marker.filtered-out{opacity:.18;pointer-events:none}.map-underbar{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:45px;padding:8px 1px;color:#a3b5c1;font-size:10px}.map-underbar .icon{width:14px;height:14px;color:#81bde0;vertical-align:middle;margin-right:2px}.map-underbar strong{color:#7ca3bc;font-weight:800}.model-counter{background:#f1f9fc;color:#89abc0;border-radius:20px;padding:6px 9px;white-space:nowrap;font-weight:800}
+.patient-section{padding:0;min-height:660px}.patient-content{padding:22px 23px 20px}.patient-upper{display:flex;align-items:center;justify-content:space-between;gap:10px}.patient-supra{letter-spacing:1.55px;font-size:9px;font-weight:850;color:#9cb2c0}.bed-chip{display:inline-flex;align-items:center;gap:5px;background:#ecf8ff;color:#5eadd9;font-size:10px;font-weight:800;padding:7px 9px;border-radius:8px}.bed-chip .icon{width:14px;height:14px}.patient-identity{display:flex;align-items:center;gap:14px;margin-top:19px}.patient-avatar{flex-shrink:0;width:60px;height:60px;border-radius:19px;background:linear-gradient(140deg,#dcf1fe,#c0e4f6);display:flex;justify-content:center;align-items:center;font-size:20px;font-weight:850;color:#5b9fc7;border:3px solid #f5fbff;box-shadow:0 4px 14px #dcecf4}.patient-name{font-size:18px;letter-spacing:-.6px;line-height:1.2;margin:0 0 5px;color:#29445a;font-weight:850}.patient-meta{font-size:10.8px;color:#9bafbd;line-height:1.4}.patient-condition{margin-top:13px;background:#f0faf7;border-radius:9px;color:#69ad9d;padding:8px 11px;font-size:10.5px;display:flex;gap:7px;align-items:center;font-weight:700}.patient-condition i{width:7px;height:7px;background:#70c1ac;border-radius:50%}.patient-condition.warning{background:#fff8eb;color:#c49756}.patient-condition.warning i{background:#e5b268}.patient-condition.danger{background:#fff1f2;color:#ce7e8b}.patient-condition.danger i{background:#e38391}.patient-subsection-heading{font-size:11px;color:#526c81;font-weight:850;margin:21px 0 10px;display:flex;align-items:center;justify-content:space-between}.patient-subsection-heading small{color:#9cb4c2;font-size:9px;font-weight:650}.vitals-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.vital-item{border-radius:10px;background:#f7fbfe;border:1px solid #edf3f8;min-height:68px;padding:10px 11px;position:relative}.vital-item .vital-label{color:#9ab1c1;font-weight:700;font-size:9.5px;display:flex;align-items:center;gap:6px}.vital-mini{width:13px;height:13px;color:#7db9dd}.vital-item strong{display:block;color:#36556b;font-size:17px;line-height:1.4;letter-spacing:-.4px;margin-top:5px}.vital-item .unit{font-size:9px;color:#a9bbc8;font-weight:700}.patient-divider{height:1px;background:#edf2f6;margin:18px 0 0}.patient-tabs{display:flex;gap:4px;background:#f5f9fc;border-radius:10px;padding:4px;margin-top:18px}.patient-tab{border:0;background:transparent;color:#9bafbd;font-size:10.5px;font-weight:800;flex:1;border-radius:8px;padding:8px 3px}.patient-tab.active{background:#fff;color:#519dc9;box-shadow:0 2px 7px rgba(77,124,148,.08)}.patient-tabs-body{min-height:188px}.patient-care-list{margin-top:4px;display:flex;flex-direction:column;gap:9px}.patient-care{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed #eaf0f3}.patient-care:last-child{border-bottom:0}.care-icon{width:32px;height:32px;background:#ebf7ff;border-radius:10px;color:#6caed9;display:grid;place-items:center;flex-shrink:0}.care-icon.iv{background:#ecf9f6;color:#6fbaa9}.care-icon.vitals{background:#f3f0fe;color:#ab99d7}.care-icon .icon{width:16px;height:16px}.care-description{flex:1;min-width:0}.care-description strong{display:block;font-size:10.8px;font-weight:850;color:#59758b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.care-description span{display:block;font-size:9.2px;color:#a6b8c4;margin-top:4px}.care-countdown{font-size:10px;font-weight:850;color:#6ba8cb;white-space:nowrap;font-variant-numeric:tabular-nums}.care-countdown.overdue{color:#d67b88}.care-countdown.done{color:#6db9a6}.allergy-row{margin-top:16px;background:#f7fbff;border:1px solid #e9f2f8;border-radius:10px;padding:11px 12px;display:flex;gap:9px}.allergy-icon{font-size:13px;line-height:1.1;color:#cc9d6e}.allergy-row strong{display:block;font-size:10.8px;color:#6a8598}.allergy-row span{display:block;font-size:10px;margin-top:4px;color:#9db0be;line-height:1.4}.patient-footer{display:flex;gap:9px;margin-top:15px}.primary-action{border:0;background:#77bfea;color:#fff;border-radius:10px;min-height:36px;font-size:11px;font-weight:850;padding:9px 13px;flex:1;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 5px 13px rgba(97,178,226,.16)}.primary-action .icon{width:15px;height:15px}.secondary-action{border:1px solid #e3eff6;background:#f6fbff;color:#6d9cbd;border-radius:10px;font-weight:800;min-height:36px;padding:9px 13px;font-size:11px}.prescription-row{padding:12px 0;border-bottom:1px dashed #e8f1f6;font-size:11px;display:flex;flex-wrap:wrap;gap:4px;align-items:center;justify-content:space-between}.prescription-row strong{font-size:11px;color:#557990}.prescription-row span{display:block;color:#95afbe;font-size:10px}.evolution-entry{margin:10px 0 13px;padding-left:14px;border-left:2px solid #b4e0f5;color:#829cad;font-size:11px;line-height:1.65}.evolution-entry strong{display:block;color:#5a91b1;font-size:10px}.patient-fineprint{font-size:9.5px;color:#a8bbc8;line-height:1.6;margin-top:15px}
+.bottom-grid{display:grid;grid-template-columns:minmax(0,1.92fr) minmax(340px,1fr);gap:17px;margin-top:18px;align-items:start}.agenda-section{padding:21px 22px 13px}.agenda-title-row{align-items:flex-end}.heading-deco{font-size:16px;color:#afe0ee}.agenda-tabs{display:flex;align-items:center;border:1px solid #e8f0f5;background:#fbfdff;border-radius:9px;padding:3px;flex-shrink:0}.agenda-filter{border:0;background:transparent;color:#96adbe;border-radius:7px;font-size:10px;padding:7px 10px;font-weight:750}.agenda-filter.active{background:#e7f6ff;color:#559cc6}.task-list{margin-top:14px}.task-row{display:flex;align-items:center;gap:12px;border-top:1px solid #eef3f6;padding:12px 1px}.task-row:first-child{border-top:0}.task-icon{height:36px;width:36px;border-radius:11px;background:#eaf8ff;color:#73b4dc;display:grid;place-items:center;flex-shrink:0}.task-icon.iv{background:#e9f9f6;color:#71c0a8}.task-icon.vitals{background:#f2effe;color:#a493db}.task-icon .icon{height:18px;width:18px}.task-body{flex:1;min-width:0}.task-body strong{display:block;font-size:11px;color:#5e788c;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.task-body span{display:block;margin-top:4px;color:#9daebb;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.task-time{display:flex;flex-direction:column;align-items:flex-end;gap:4px;min-width:72px}.task-time strong{color:#6a9fbb;font-size:11px;font-weight:850;font-variant-numeric:tabular-nums}.task-time span{color:#a4bac7;font-size:9px;font-variant-numeric:tabular-nums}.task-time.danger strong{color:#d47682}.task-time.warning strong{color:#d4a25e}.task-done{font-size:9px;font-weight:850;color:#74beaa}.task-check{border:1px solid #dcecf6;background:#fff;color:#8eb4c9;border-radius:8px;padding:7px 8px;font-size:10px;font-weight:800;white-space:nowrap}.task-check:hover{color:#378ebc;background:#edf8ff}.empty-state{text-align:center;padding:22px;color:#93b1c4;font-size:12px}
+.team-section{padding:21px 22px}.team-live{font-size:9px;color:#83bba8;font-weight:800;background:#eef9f6;padding:7px 8px;border-radius:20px;white-space:nowrap}.team-live span{display:inline-block;background:#83c9b5;border-radius:50%;width:5px;height:5px;margin-right:4px}.staff-row{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #edf3f7}.staff-row:first-of-type{margin-top:10px}.staff-pic{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:#498bb3;font-size:10px;font-weight:850;background:#e5f5fe}.staff-pic.pic-b{background:#e8f7ed;color:#72ad8b}.staff-pic.pic-c{background:#f0ebfd;color:#a18bc5}.staff-row div{flex:1;min-width:0}.staff-row strong{font-size:11px;color:#627f93;display:block}.staff-row div span{display:block;font-size:10px;color:#abbcc7;margin-top:5px}.staff-presence{width:7px;height:7px;border-radius:50%;background:#7acbb0}.team-tip{display:flex;gap:12px;align-items:flex-start;border-radius:11px;background:#f0f9ff;border:1px solid #e3f2fb;padding:14px;margin-top:19px}.team-tip .icon{width:19px;height:19px;color:#85c9e7}.team-tip p{font-size:10px;line-height:1.55;color:#8aa8ba;margin:0}.team-tip strong{color:#6296b6}.page-footer{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:10px;color:#a5b9c6;margin:21px 3px 4px}.page-footer>span:first-child{color:#7397ae;font-weight:850}.footer-blue{color:#6aadd4}
+.toast-container{position:fixed;bottom:18px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:50}.toast{background:#fff;border:1px solid #dcebf5;border-left:4px solid #83cae9;color:#62869f;border-radius:11px;box-shadow:0 14px 40px #527e9930;padding:13px 18px;max-width:360px;font-size:12px;line-height:1.5;animation:slideToast .25s ease}.toast b{color:#397ca5}@keyframes slideToast{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}.modal-backdrop{position:fixed;z-index:100;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(33,59,78,.38);backdrop-filter:blur(4px);padding:18px}.modal-content{max-width:490px;width:100%;background:white;border-radius:20px;padding:26px 28px;box-shadow:0 24px 80px rgba(31,74,102,.25)}.modal-content h3{margin:4px 0 12px;font-size:20px;color:#2d526e}.modal-content p{font-size:12px;line-height:1.65;color:#839eae}.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.modal-actions button{min-height:39px;padding:10px 15px}.modal-info{background:#eff8fe;border-radius:9px;padding:12px;color:#6496b2;font-size:11px;line-height:1.6}.scene-stage.expanded{position:fixed;inset:17px;border-radius:16px;width:auto;height:auto;z-index:60;box-shadow:0 10px 0 200vh rgba(22,55,80,.68)}body.map-expanded{overflow:hidden}.scene-stage.expanded .scene-actions{bottom:70px}.scene-stage.expanded .scene-bottom-left{bottom:28px}
+@media(max-width:1370px){.content{padding:24px}.primary-grid,.bottom-grid{grid-template-columns:minmax(0,1.55fr) minmax(323px,1fr)}.ward-section{padding:18px 17px 0}.scene-stage{height:465px}.patient-content{padding:19px 18px 18px}.metric{padding:15px}.scene-bottom-left{gap:9px}.map-underbar{font-size:9.3px}}
+@media(max-width:1100px){.primary-grid,.bottom-grid{grid-template-columns:minmax(0,1fr)}.patient-section{min-height:initial}.patient-content{max-width:none}.patient-tabs-body{min-height:135px}.scene-stage{height:520px}.vitals-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.patient-care-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.patient-care{align-items:flex-start;border:1px solid #edf3f7;border-radius:10px;padding:10px}.care-countdown{font-size:9px}.metric-top{font-size:11px}.metric-note{font-size:9px}}
+@media(max-width:760px){.sidebar{flex-basis:65px}.brand-copy{display:none}.brand-mark{width:38px;height:38px;border-radius:12px}.brand-mark span{font-size:27px}.brand{padding:20px 0 16px}.side-item{width:50px;min-height:55px}.side-item span{font-size:9px}.side-item.active:before{left:-7px}.side-divider{width:32px}.topbar{height:64px;padding:0 16px}.top-actions{gap:8px}.datebox{display:none}.demo-tag{font-size:8px;padding:7px 8px}.top-avatar{display:none}.content{padding:23px 13px}.page-intro h1{font-size:26px}.intro-right{display:none}.subtitle{font-size:11px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric{min-height:108px;padding:12px}.metric-value{font-size:28px}.metric-top{font-size:10px}.metric-note{font-size:9.2px}.metric-icon{height:30px;width:30px}.metric-icon .icon{height:17px;width:17px}.scene-stage{height:450px}.map-underbar span:first-child{max-width:77%}.primary-grid,.bottom-grid{gap:12px}.scene-bottom-left{gap:6px}.scene-legend{font-size:8px}.bed-marker{font-size:8px;padding:5px}.patient-care-list{grid-template-columns:1fr}.vitals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-footer{font-size:9px}}
+@media(max-width:500px){.sidebar{flex-basis:54px}.side-nav{padding:5px}.side-item{width:44px}.side-item .icon{height:19px;width:19px}.side-item span{font-size:8px}.sidebar-foot{padding-bottom:14px}.staff-avatar{width:32px;height:32px;font-size:10px}.help-dot{display:none}.crumbs{gap:4px;font-size:10px}.crumbs .icon{width:11px;height:11px}.topbar{padding:0 10px}.top-actions{gap:5px}.demo-tag{display:none}.content{padding:17px 9px}.page-intro h1{font-size:24px}.page-intro{margin-bottom:11px}.notice{font-size:10px;margin-bottom:12px}.metrics{margin-bottom:12px}.metric-top{align-items:flex-start}.metric-note{font-size:8px}.ward-section{padding:14px 11px 0}.section-title-group{gap:6px}h2{font-size:18px}.header-badge{font-size:8px;padding:5px}.map-toolbar{align-items:stretch;flex-direction:column}.search-input{max-width:none;flex:auto}.view-toggle{width:100%}.view-option{flex:1}.scene-stage{height:400px}.scene-status-top{top:9px;left:8px;right:8px}.scene-loc{font-size:8px;padding:7px}.drag-instruction{display:none}.scene-bottom-left{bottom:9px;left:8px;padding:6px;gap:5px}.scene-legend{font-size:7.5px;gap:3px}.scene-actions{bottom:35px;right:7px}.scene-control{height:27px;width:27px}.map-underbar{font-size:8px}.map-underbar strong{display:none}.agenda-title-row{align-items:flex-start;flex-direction:column}.agenda-tabs{width:100%}.agenda-filter{flex:1}.task-check{font-size:9px;padding:6px}.task-row{gap:7px}.task-icon{height:32px;width:32px}.task-body strong{font-size:10px}.task-time{min-width:55px}.task-time strong{font-size:9px}.patient-content,.agenda-section,.team-section{padding:17px 14px}.scene-stage.expanded{inset:6px}.scene-stage.expanded .scene-actions{bottom:55px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition:none!important}}
+
+/* ── V3 · Hospital em três andares / animações ── */
+.floor-bar{display:flex;align-items:center;gap:8px;margin:13px 0 11px;flex-wrap:wrap}
+.floor-bar-label{font-size:9px;font-weight:900;letter-spacing:1.7px;color:#8ca9bc;margin-right:2px}
+.floor-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #dceef7;border-radius:10px;padding:7px 11px;color:#769bb2;background:#fafdff;font-size:11px;font-weight:800;transition:background .18s,border .18s,transform .18s}
+.floor-btn:hover{transform:translateY(-1px);background:#e9f6ff}
+.floor-btn.active{color:#357eaa;background:#e8f6ff;border-color:#a9dcf5;box-shadow:0 3px 12px #8acded20}
+.floor-emoji{display:grid;place-items:center;width:24px;height:24px;border-radius:7px;background:#edf5fc;font-size:9px;color:#699dbe;letter-spacing:.2px}
+.floor-btn.active .floor-emoji{background:#a4dcf9;color:#246f9e}
+.floor-count{margin-left:auto;color:#91adbd;font-weight:750;font-size:10px}
+.scene-stage{height:570px;min-height:430px;touch-action:none;}
+#sceneMotion{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.scene-shine{z-index:3;opacity:.35}
+.scene-markers{z-index:5}
+.room-marker{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;display:flex;align-items:baseline;gap:4px;padding:7px 11px;border:1px solid #a9d9f0;border-radius:10px;background:linear-gradient(135deg,#fff,#e7f7ff);box-shadow:0 5px 15px #689cbc2f;white-space:nowrap;color:#4789b4;transition:transform .2s,background .2s,border .2s}
+.room-marker span{font-size:8px;letter-spacing:.85px;font-weight:800;color:#83acc4}
+.room-marker strong{font-size:14px;letter-spacing:.2px;font-weight:900;color:#3988b8}
+.room-marker:hover,.room-marker:focus-visible{background:#d9f2ff;border-color:#70bfe8;transform:translate(-50%,-53%)}
+.room-marker.room-focused{background:#e0f4ff;border:1.5px solid #6cb7e0;padding:9px 14px}
+.room-marker.room-focused strong{font-size:19px}
+.bed-marker{z-index:1;background:#ffffffeb;backdrop-filter:blur(4px);padding:5px 8px;font-size:9px}
+.scene-navigation{position:absolute;right:13px;top:52px;z-index:10;pointer-events:none;display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.scene-back,.scene-exit{pointer-events:auto;border:1px solid #b6ddf1;background:#fff;box-shadow:0 5px 18px #76a9c529;color:#487c9b;border-radius:10px;font-size:11px;font-weight:850;padding:10px 13px}
+.scene-back:hover,.scene-exit:hover{background:#e4f5fe;color:#267cae}
+.scene-exit{color:#bd5260;border-color:#f5cbd1;background:#fff5f5}
+.scene-stage.expanded .scene-navigation{top:60px;right:17px}
+.scene-stage.expanded .scene-exit{display:inline-flex!important}
+.scene-toolline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:13px 0 6px;flex-wrap:wrap}
+.nurse-status{font-size:11px;font-weight:800;color:#4d99a9;background:#f0fbf8;padding:8px 10px;border-radius:9px;border:1px solid #d9f2ec}
+.scene-toolbuttons{display:flex;gap:7px;flex-wrap:wrap}
+.animation-btn{border:1px solid #e0eef5;background:#fff;color:#6d9bb5;padding:8px 10px;border-radius:9px;font-size:10px;font-weight:800}
+.animation-btn:hover{background:#eaf8ff;color:#2d82b2}
+.building-floor-tag{position:absolute;transform:translate(-40%,-50%);background:#fff;border:1px solid #a7d6ef;color:#548bac;pointer-events:auto;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:9px 12px;border-radius:11px;box-shadow:0 6px 18px #639ac329;white-space:nowrap}
+.building-floor-tag strong{font-size:12px;letter-spacing:.55px}
+.building-floor-tag small{font-size:9px;color:#97b0c0}
+.building-floor-tag:hover{background:#e7f6ff;border-color:#74bfe5}
+.cough-bubble{pointer-events:none;position:absolute;z-index:7;transform:translate(-50%,-100%);border:1px solid #a8dcef;background:#ffffffea;padding:5px 10px;border-radius:14px 14px 14px 4px;font-size:13px;color:#5da6cb;font-weight:950;box-shadow:0 7px 18px #8bc5e64a}
+.cough-bubble span{font-size:12px;color:#acc9d5}
+.nurse-badge{position:absolute;transform:translate(-50%,-100%);z-index:8;pointer-events:none;border:1px solid #8bddcf;background:#eafff8;color:#409b87;box-shadow:0 5px 15px #88cdb529;border-radius:14px;padding:6px 10px;font-size:10px;font-weight:900;white-space:nowrap}
+.scene-stage.expanded{inset:12px;box-shadow:0 0 0 100vmax rgba(35,69,91,.68)}
+.scene-stage.expanded .scene-actions{bottom:78px}
+.scene-stage.expanded .scene-bottom-left{bottom:32px}
+.scene-stage:focus-within{outline:1px solid #b5e3f9}
+@media(max-width:1370px){.scene-stage{height:545px}}
+@media(max-width:1100px){.scene-stage{height:580px}}
+@media(max-width:760px){.scene-stage{height:530px}.floor-count{display:none}.floor-bar{gap:5px}.floor-btn{font-size:10px;padding:6px 7px}.floor-bar-label{font-size:8px}.scene-toolline{align-items:flex-start}.room-marker{padding:5px 8px}.room-marker strong{font-size:11px}.room-marker span{font-size:7px}.scene-navigation{top:46px;right:8px}.scene-back,.scene-exit{font-size:9px;padding:8px 9px}}
+@media(max-width:500px){.scene-stage{height:480px}.floor-bar-label{display:none}.floor-btn{flex:1;justify-content:center;padding:6px 5px;gap:4px}.floor-emoji{width:19px;height:19px;font-size:8px}.scene-actions{bottom:60px;right:6px}.scene-toolline{gap:6px}.nurse-status{font-size:9px}.scene-toolbuttons{width:100%}.animation-btn{flex:1;font-size:9px}.room-marker span{display:none}.room-marker strong{font-size:12px}.scene-back,.scene-exit{font-size:8px;padding:7px 8px}.building-floor-tag{padding:6px 8px}.building-floor-tag strong{font-size:10px}.building-floor-tag small{font-size:7px}}
+/* Clínica SAÚDE · identidade visual e motor WebGL 2 */
+[hidden]{display:none!important}
+.brand-copy{font-size:17px;letter-spacing:-.7px;white-space:nowrap;text-transform:none}
+.brand-copy span{display:block;font-size:12px;letter-spacing:2px;color:#80c2e4;font-weight:900;margin-top:0}
+.brand-mark{background:linear-gradient(140deg,#75c6e9,#a4dfdf);box-shadow:0 8px 18px #8dccdd55}
+.demo-tag{background:#ecf9f8;color:#469a90}
+.page-intro h1 span{color:#77b9d9}
+.scene-stage{background:radial-gradient(circle at 45% 42%,#f9fdff 0,#ecf8fe 66%,#e4f1fa 100%);height:630px;min-height:490px}
+.scene-stage::before{opacity:.20}
+#hospital3d{image-rendering:auto}
+#sceneMotion{display:none}
+.scene-shine{opacity:.04}
+.scene-markers .room-marker{border-radius:11px;padding:7px 11px;border:1px solid #c4e5ec;background:rgba(255,255,255,.93);box-shadow:0 7px 20px #4d8aa520;gap:7px;transition:background .2s,box-shadow .2s;}
+.scene-markers .room-marker strong{font-size:13px;color:#287caa}
+.scene-markers .room-marker span{font-size:8px;color:#8caeac;text-transform:uppercase}
+.scene-markers .room-marker.active{border:2px solid #6bc9b9;background:#eefff9;box-shadow:0 5px 20px #5fbf9d40}
+.clinic-sign{position:absolute;transform:translate(-50%,-50%);z-index:7;display:flex;align-items:center;gap:9px;padding:10px 17px;border-radius:13px;background:linear-gradient(135deg,#fafdff,#dff7fb);border:1px solid #a8d6e6;box-shadow:0 14px 35px rgba(67,132,156,.22);font-size:13px;font-weight:850;letter-spacing:1.2px;color:#3a819f;white-space:nowrap;pointer-events:none}
+.clinic-sign strong{color:#43aa9d}.sign-icon{display:grid;place-items:center;border-radius:7px;background:#7dc7d9;color:white;width:27px;height:27px;font-size:17px}
+.fallback-3d{position:absolute;z-index:4;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(#eff9fd,#e2f1f7);color:#518bab;gap:9px}.fallback-3d span{font-size:12px;max-width:350px;line-height:1.5}
+.ward-section{box-shadow:0 10px 40px #75aec018}
+.nurse-status{color:#418c82;background:#edfaf7;border-color:#c8eae1}
+.scene-back{background:#eafdff;color:#317b9f}
+@media(max-width:1370px){.scene-stage{height:600px}}
+@media(max-width:1100px){.scene-stage{height:620px}}
+@media(max-width:760px){.scene-stage{height:550px}}
+@media(max-width:500px){.scene-stage{height:490px}.clinic-sign{font-size:9px;padding:7px 9px}.sign-icon{height:20px;width:20px;font-size:12px}.scene-markers .room-marker{padding:5px 7px;gap:2px}.scene-markers .room-marker strong{font-size:11px}}
+
+/* Mapa 3D como protagonista da página */
+.primary-grid{margin-bottom:20px}.metrics{margin:14px 0 20px}
+.ward-section{border:1px solid #dceef5}
+.primary-grid .section-subtitle{max-width:570px}
+@media(min-width:1200px){.primary-grid{grid-template-columns:minmax(0,1.9fr) minmax(320px,.92fr)}}
+
+/* Clínica SAÚDE: painel de informações e créditos */
+.help-dot{display:grid;place-items:center;line-height:1;background:#fff;cursor:pointer;font-family:inherit;transition:color .2s,background .2s,transform .2s,box-shadow .2s}
+.help-dot:hover,.help-dot:focus-visible{color:#2c90b9;background:#e9f8ff;transform:translateY(-1px);box-shadow:0 4px 14px #79bad82b;outline:none;border-color:#96d4ef}
+.about-cover{display:flex;align-items:center;gap:13px;margin:8px 0 12px}
+.about-cover h3{margin:0 0 3px;font-size:24px;line-height:1.15}
+.about-logo{display:grid;place-items:center;height:46px;width:46px;flex-shrink:0;border-radius:14px;background:linear-gradient(140deg,#8bcfeb,#69cbb6);color:#fff;font-size:29px;font-weight:600;box-shadow:0 8px 20px #74c4dc4d}
+.about-tagline{font-size:11px;color:#83a5b7;font-weight:700}
+.modal-content .about-controls{display:grid;gap:6px;background:#f0f9fd;padding:13px 15px;border-radius:12px;border:1px solid #d5ecf5;margin-top:13px;font-size:12px;line-height:1.65;color:#7296ab}
+.about-controls strong{color:#478ab3;font-size:12px}
+.about-credits{margin-top:14px;padding:14px 16px;border:1px solid #d5e9ef;border-radius:13px;background:linear-gradient(120deg,#f8fdff,#f0fbf8);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.about-credits>span{font-size:9px;letter-spacing:1.7px;font-weight:900;color:#73aaa9}
+.about-credits>strong{font-size:16px;color:#285c76;letter-spacing:-.2px}
+.about-credit-link{color:#267ea9;font-size:12px;font-weight:800;text-underline-offset:3px}
+.about-credit-link:hover{color:#159c9d}
+@media(max-width:500px){.sidebar-foot .help-dot{display:grid;width:25px;height:25px;font-size:14px}.modal-content{max-height:calc(100dvh - 35px);overflow-y:auto;padding:20px}.about-cover h3{font-size:21px}}
+
+/* Contraste dos textos no painel Sobre o projeto */
+.modal-content p{font-size:13px;color:#54768c;line-height:1.7}
+.modal-content .about-controls{color:#5a8196}
+.about-credit-link{color:#216f99}
+
+/* v7 — Ficha contextual aberta pelo mapa, com a enfermeira sempre no posto. */
+.inspector-open{overflow:hidden}
+.inspector-layer{position:fixed;inset:0;z-index:2050;display:flex;justify-content:flex-end;isolation:isolate}
+.inspector-layer[hidden]{display:none!important}
+.inspector-scrim{position:absolute;inset:0;width:100%;height:100%;background:rgba(38,78,104,.26);border:0;cursor:default;backdrop-filter:blur(2.5px)}
+.inspector-drawer{position:relative;z-index:1;width:min(525px,100%);height:100dvh;background:#fff;border-left:1px solid #d4ecf6;box-shadow:-25px 0 70px rgba(31,87,127,.19);overflow:hidden;animation:inspector-in .25s cubic-bezier(.2,.7,.3,1) both}
+@keyframes inspector-in{from{transform:translateX(30px);opacity:.7}to{transform:translateX(0);opacity:1}}
+.inspector-scroll{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:30px 32px 34px;scrollbar-color:#c7e5f2 transparent;scrollbar-width:thin}
+.inspector-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:12px}
+.inspector-kicker{font-size:10px;letter-spacing:1.75px;font-weight:900;color:#659ebd;display:flex;align-items:center;gap:8px}
+.inspect-kicker-dot{width:8px;height:8px;border-radius:50%;background:#67c8bd;box-shadow:0 0 0 4px #e9faf5}
+.inspect-demo{font-size:8px;color:#569f90;letter-spacing:1px;background:#e6f8f3;border:1px solid #cdeee6;border-radius:5px;padding:4px 6px}
+.inspect-close{width:35px;height:35px;border-radius:10px;display:grid;place-items:center;flex:none;border:1px solid #d7eaf3;color:#7699ae;background:#f7fbfe;transition:background .2s,color .2s}
+.inspect-close:hover{background:#e8f5fc;color:#2b88b9}.inspect-close .icon{width:16px;height:16px}
+.inspect-room-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:20px}
+.inspect-room-head h2{font-size:30px;letter-spacing:-1px;color:#285774;line-height:1.15;margin:6px 0 7px}
+.inspect-room-head p{font-size:12px;line-height:1.55;color:#8aa5b3;max-width:310px;margin:0}
+.inspect-floor{font-size:10px;font-weight:850;letter-spacing:1.1px;color:#7ca3ba}
+.inspect-floor span{color:#71c8b9;margin:0 3px}
+.inspect-room-icon{display:grid;place-items:center;width:51px;height:51px;background:linear-gradient(145deg,#e5f6ff,#daf9ee);color:#55a8c1;border:1px solid #cce8f3;border-radius:15px}
+.inspect-room-icon .icon{width:24px;height:24px}
+.inspect-chooser{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 24px}
+.inspect-bed-choice{text-align:left;display:flex;align-items:center;gap:9px;min-width:0;padding:13px 10px;border-radius:14px;border:1px solid #dcebf2;background:#f9fcff;color:#4e7187;transition:background .2s,box-shadow .2s,border-color .2s;cursor:pointer}
+.inspect-bed-choice:hover{background:#edf9ff;border-color:#9fd7ed}
+.inspect-bed-choice.is-active{background:linear-gradient(135deg,#e9f8ff,#edfdf9);border:1.5px solid #7ac3df;box-shadow:0 7px 17px rgba(103,178,214,.15)}
+.inspect-bed-avatar{width:34px;height:34px;display:grid;place-items:center;flex:none;color:#438faf;font-size:11px;font-weight:900;background:#d7effd;border-radius:11px}
+.inspect-bed-choice.is-active .inspect-bed-avatar{background:#b7e2f4;color:#276c93}
+.inspect-bed-copy{display:flex;flex-direction:column;min-width:0;gap:3px}
+.inspect-bed-copy small{font-size:8px;font-weight:900;letter-spacing:1px;color:#7aaabb}
+.inspect-bed-copy strong{font-size:11px;font-weight:850;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:130px}
+.inspect-bed-status{width:6px;height:6px;border-radius:50%;flex:none;margin-left:auto;background:#75cabc}
+.inspect-bed-status.is-overdue{background:#f1a0a3}.inspect-bed-status.is-soon{background:#f3c76a}
+.inspect-section-label{display:flex;gap:8px;align-items:center;margin:25px 0 13px;font-size:10px;letter-spacing:1.1px;font-weight:900;color:#78a1b4}
+.inspect-section-label small{margin-left:auto;font-size:10px;color:#9db9c3;letter-spacing:0;text-transform:none}
+.inspect-label-dot{height:6px;width:6px;background:#5bc0c4;border-radius:50%}
+.inspect-profile{display:flex;align-items:center;gap:13px;padding:2px 0 13px}
+.inspect-avatar-lg{width:58px;height:58px;flex:none;border-radius:18px;background:linear-gradient(145deg,#bce6f9,#d8f5eb);color:#2d81a5;font-size:18px;letter-spacing:-.3px;font-weight:850;display:grid;place-items:center}
+.inspect-profile-main{min-width:0}.inspect-profile h3{font-size:19px;line-height:1.25;letter-spacing:-.45px;color:#2c607e;margin:0 0 6px}
+.inspect-profile p{font-size:11px;color:#8ba8b6;line-height:1.55;margin:0}
+.inspect-condition{display:flex;align-items:center;gap:8px;border:1px solid #d7ece7;background:#f0fbf8;color:#4c9e87;font-size:11px;font-weight:800;border-radius:10px;padding:10px 12px;line-height:1.5}
+.inspect-condition.warning{background:#fff9ed;border-color:#fae9c5;color:#be9353}
+.inspect-condition.danger{background:#fff1f2;border-color:#f6d8dd;color:#c67883}
+.inspect-condition i{height:8px;width:8px;flex:none;border-radius:50%;background:currentColor}
+.inspect-vitals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.inspect-vital{border:1px solid #dbeef6;background:#f8fcff;border-radius:13px;min-height:91px;padding:12px 13px;display:flex;flex-direction:column;justify-content:space-between}
+.inspect-vital>span{display:flex;align-items:center;gap:5px;color:#83a4b4;font-size:9px;font-weight:850;letter-spacing:.35px}
+.inspect-vital>span .icon{width:13px;height:13px;stroke:#76b8cf}
+.inspect-vital strong{font-size:24px;font-weight:850;letter-spacing:-.7px;color:#3d7899}
+.inspect-vital strong small{font-size:10px;letter-spacing:0;color:#8ea8b5;font-weight:750}
+.inspect-timeline{display:flex;flex-direction:column;gap:9px}
+.inspect-timeline-row{display:flex;align-items:center;gap:10px;border:1px solid #e5eef4;background:#fff;border-radius:12px;padding:11px 12px}
+.inspect-task-symbol{width:32px;height:32px;display:grid;place-items:center;flex:none;border-radius:10px;background:#eef5ff;color:#669fd0}
+.inspect-task-symbol.med{background:#f2ecfc;color:#a38bc7}
+.inspect-task-symbol.iv{background:#e8f8f7;color:#67bcb4}
+.inspect-task-symbol.vitals{background:#ecf5ff;color:#6cadd1}
+.inspect-task-symbol .icon{width:16px;height:16px}
+.inspect-task-description{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.inspect-task-description strong{color:#426c87;font-size:11px;line-height:1.35}
+.inspect-task-description span{color:#8faaba;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inspect-task-description small{font-size:9px;color:#a6bdc8}
+.inspect-task-deadline{text-align:right;min-width:75px;display:flex;flex-direction:column;gap:5px}
+.inspect-task-deadline strong{font-variant-numeric:tabular-nums;font-size:15px;color:#4d92b2;white-space:nowrap}
+.inspect-task-deadline small{font-size:9px;font-weight:750;color:#9ab2bf}
+.inspect-task-deadline.overdue strong,.inspect-task-deadline.overdue small{color:#d17883}
+.inspect-task-deadline.soon strong{color:#b58d3d}
+.inspect-task-deadline.done strong,.inspect-task-deadline.done small{color:#59ad99}
+.inspect-note{padding:13px 15px;border:1px solid #e8e7df;border-radius:12px;background:#fffdf5;margin-bottom:9px}
+.inspect-note.note-soft{background:#f7fbff;border-color:#e1eef6}
+.inspect-note strong{display:flex;align-items:center;gap:7px;font-size:11px;color:#66829b}
+.inspect-note .icon{height:14px;width:14px;stroke:#6cb2c9}
+.inspect-note p{margin:8px 0 0;color:#7994a3;font-size:11px;line-height:1.6}
+.inspect-bottom-actions{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.inspect-main-button,.inspect-quiet-button{width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;font-size:12px;font-weight:850;cursor:pointer;transition:background .2s}
+.inspect-main-button{color:#fff;background:#73b9dc;border:1px solid #73b9dc;box-shadow:0 8px 20px rgba(71,151,196,.19)}
+.inspect-main-button:hover{background:#519fc9}.inspect-main-button .icon{height:16px;width:16px}
+.inspect-quiet-button{color:#5790b3;background:#f4fbff;border:1px solid #d4eaf5}
+.inspect-quiet-button:hover{background:#e9f7fe}
+.inspect-disclaimer{font-size:10px;text-align:center;color:#a0b3bf;line-height:1.6;margin:17px 0 4px}
+@media(max-width:600px){.inspector-layer{align-items:flex-end;justify-content:center}.inspector-drawer{width:100%;height:min(90dvh,950px);border:1px solid #d2e8f2;border-radius:24px 24px 0 0;box-shadow:0 -20px 56px #32668525;animation:inspector-up .22s ease-out both}.inspector-scroll{padding:23px 20px 28px}.inspector-top{margin-bottom:20px}.inspect-room-head h2{font-size:27px}.inspect-profile h3{font-size:17px}.inspect-bed-copy strong{font-size:10px}.inspector-kicker{font-size:8.5px;letter-spacing:1px}}
+@keyframes inspector-up{from{transform:translateY(24px);opacity:.7}to{transform:translateY(0);opacity:1}}
+@media(max-width:355px){.inspector-scroll{padding:18px 12px}.inspect-bed-choice{padding:9px 7px;gap:6px}.inspect-bed-avatar{width:28px;height:28px;font-size:10px}.inspect-task-deadline{min-width:58px}.inspect-timeline-row{gap:5px;padding:8px}}
+@media(prefers-reduced-motion:reduce){.inspector-drawer{animation:none}}
+
+/* v8 — Navegação contextual dentro da área ampliada do mapa 3D. */
+.scene-fullscreen-nav{display:none;position:absolute;top:69px;left:18px;z-index:22;align-items:center;gap:6px;padding:7px;border:1px solid #cce7f4;border-radius:14px;background:rgba(255,255,255,.96);box-shadow:0 8px 28px rgba(58,126,164,.17);backdrop-filter:blur(12px);max-width:calc(100% - 36px)}
+.scene-stage.expanded .scene-fullscreen-nav{display:flex}
+.fullscreen-nav-btn{border:1px solid transparent;border-radius:9px;background:transparent;color:#638da6;min-height:36px;padding:8px 12px;font-size:12px;font-weight:850;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:background .16s,border-color .16s,color .16s}
+.fullscreen-nav-btn:hover{background:#eaf8ff;color:#297faf}
+.fullscreen-nav-btn.active{background:#dff3ff;color:#267fae;border-color:#a8d7ee;box-shadow:0 2px 8px rgba(91,166,207,.13)}
+.fullscreen-nav-icon{font-size:17px;line-height:1;color:#76b8d9}
+.fullscreen-nav-divider{height:24px;width:1px;background:#d9ebf4;flex:none;margin:0 2px}
+/* The stage label and exit button use the first row; floor controls use the second. */
+.scene-stage.expanded .scene-navigation{top:15px;right:16px}
+.scene-stage.expanded .scene-status-top{top:15px;left:18px;right:175px}
+.scene-stage.expanded .drag-instruction{display:none}
+@media(max-width:560px){
+  .scene-stage.expanded .scene-fullscreen-nav{top:66px;left:8px;right:8px;max-width:none;width:calc(100% - 16px);gap:3px;padding:5px;border-radius:11px;justify-content:space-between}
+  .fullscreen-nav-btn{font-size:10px;padding:8px 5px;min-height:33px;flex:1;gap:3px}
+  .fullscreen-nav-icon{font-size:13px}
+  .fullscreen-nav-divider{margin:0 1px;height:19px}
+  .scene-stage.expanded .scene-status-top{display:none}
+  .scene-stage.expanded .scene-navigation{top:11px;right:9px}
+  .scene-stage.expanded .scene-back,.scene-stage.expanded .scene-exit{font-size:9px;padding:8px 9px}
+}
+@media(max-width:390px){
+  .fullscreen-nav-btn{font-size:9px;letter-spacing:-.1px;padding:8px 2px}
+}
+
+  </style>
+  <script>
+/* Clínica SAÚDE · cena original em WebGL 2, sem CDN ou bibliotecas externas.
+   Malhas estáticas e personagens articulados têm posições distintas; todos os
+   elementos compartilham o mesmo z-buffer, evitando atravessamentos visuais. */
+(()=>{
+'use strict';
+const TAU=Math.PI*2, clamp=(x,a,b)=>Math.min(b,Math.max(a,x)),mix=(a,b,t)=>a+(b-a)*t;
+const C={
+  snow:'#ffffff',paper:'#f8fdff',floor:'#eff9fc',floorAlt:'#eaf6fa',border:'#b5d6e5',deep:'#345e76',ink:'#284d66',
+  wall:'#d9f1fa',wall2:'#c7e7f5',wallTrim:'#9bd3e9',glass:'#91d5f1',tile:'#f1f9fb',mint:'#73cab5',mintLt:'#d0f1e7',
+  baby:'#a6ddf4',blue:'#6dafd2',blueDark:'#598eb2',rose:'#efa7ab',yellow:'#f5d796',steel:'#b2c8d5',
+  metal:'#d5e4e9',bed:'#9fbfcc',shadow:'#d1e4eb',linen:'#f6fbfe',navy:'#2d5066',screen:'#20475c',
+  hair:'#65524d',wood:'#e4d9c8',woodTop:'#fff5e7',plant:'#6cbaa4',plantDark:'#498e7d'
+};
+const colorCache=new Map();
+function rgb(hex){if(colorCache.has(hex))return colorCache.get(hex);let n=parseInt(hex.slice(1),16),a=[((n>>16)&255)/255,((n>>8)&255)/255,(n&255)/255];colorCache.set(hex,a);return a;}
+const add=(a,b)=>[a[0]+b[0],a[1]+b[1],a[2]+b[2]],sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]],mul=(a,x)=>[a[0]*x,a[1]*x,a[2]*x],len=a=>Math.hypot(...a),norm=a=>mul(a,1/(len(a)||1)),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+class Builder{
+  constructor(){this.v=[];this.stack=[{x:0,y:0,z:0,a:0}];}
+  push(x=0,y=0,z=0,angle=0){const p=this.stack[this.stack.length-1];this.stack.push({x:p.x+x*Math.cos(p.a)-z*Math.sin(p.a),y:p.y+y,z:p.z+x*Math.sin(p.a)+z*Math.cos(p.a),a:p.a+angle});return this;}
+  pop(){this.stack.pop();return this;}
+  pt(q){const t=this.stack[this.stack.length-1];return [t.x+q[0]*Math.cos(t.a)-q[2]*Math.sin(t.a),t.y+q[1],t.z+q[0]*Math.sin(t.a)+q[2]*Math.cos(t.a)];}
+  tri(a,b,c,col){a=this.pt(a);b=this.pt(b);c=this.pt(c);const n=norm(cross(sub(b,a),sub(c,a))),s=rgb(col);for(const p of [a,b,c])this.v.push(...p,...n,...s);}
+  quad(a,b,c,d,col){this.tri(a,b,c,col);this.tri(a,c,d,col);}
+  box(x,y,z,w,h,d,col,top=null,side=null){const a=x-w/2,b=x+w/2,l=y-h/2,r=y+h/2,n=z-d/2,f=z+d/2;
+    this.quad([a,r,n],[a,r,f],[b,r,f],[b,r,n],top||col);
+    this.quad([a,l,f],[a,l,n],[b,l,n],[b,l,f],side||col);
+    this.quad([b,l,n],[b,r,n],[b,r,f],[b,l,f],side||col);
+    this.quad([a,l,f],[a,r,f],[a,r,n],[a,l,n],side||col);
+    this.quad([a,l,n],[a,r,n],[b,r,n],[b,l,n],col);
+    this.quad([b,l,f],[b,r,f],[a,r,f],[a,l,f],col);return this;
+  }
+  // Per-vertex normals and rounded silhouettes: characters no longer have flat,
+  // inward-facing facets. Furniture stays crisp, while skin and fabric look soft.
+  vertex(p,n,col){const t=this.stack[this.stack.length-1],q=this.pt(p),nr=norm([n[0]*Math.cos(t.a)-n[2]*Math.sin(t.a),n[1],n[0]*Math.sin(t.a)+n[2]*Math.cos(t.a)]);this.v.push(...q,...nr,...rgb(col));}
+  sphere(x,y,z,rx,ry,rz,col,steps=12,rings=9,pitch=0){
+    // A local X-axis tilt keeps all facial features aligned on a reclining head.
+    const cp=Math.cos(pitch),sp=Math.sin(pitch);
+    const tilt=(xx,yy,zz)=>[xx,cp*yy-sp*zz,sp*yy+cp*zz];
+    const pt=(u,v)=>{const q=tilt(rx*Math.cos(v)*Math.cos(u),ry*Math.sin(v),rz*Math.cos(v)*Math.sin(u));return [x+q[0],y+q[1],z+q[2]];};
+    const nm=(u,v)=>tilt(Math.cos(v)*Math.cos(u)/rx,Math.sin(v)/ry,Math.cos(v)*Math.sin(u)/rz);
+    for(let j=0;j<rings;j++){const va=-Math.PI/2+j*Math.PI/rings,vb=-Math.PI/2+(j+1)*Math.PI/rings;
+      for(let i=0;i<steps;i++){const ua=i*TAU/steps,ub=(i+1)*TAU/steps;
+        const a=pt(ua,va),b=pt(ub,va),c=pt(ub,vb),d=pt(ua,vb),na=nm(ua,va),nb=nm(ub,va),nc=nm(ub,vb),nd=nm(ua,vb);
+        this.vertex(a,na,col);this.vertex(c,nc,col);this.vertex(b,nb,col);
+        this.vertex(a,na,col);this.vertex(d,nd,col);this.vertex(c,nc,col);
+      }
+    }return this;
+  }
+  capsule(a,b,r,col,steps=10){this.rod(a,b,r,col,steps);this.sphere(...a,r,r,r,col,steps,7);this.sphere(...b,r,r,r,col,steps,7);return this;}
+  rod(a,b,rad,col,sides=7){const d=norm(sub(b,a));let u=norm(cross(d,Math.abs(d[1])>.8?[1,0,0]:[0,1,0])),v=norm(cross(d,u));for(let i=0;i<sides;i++){const t1=i*TAU/sides,t2=(i+1)*TAU/sides;const ring=t=>add(mul(u,Math.cos(t)*rad),mul(v,Math.sin(t)*rad));const aa=add(a,ring(t1)),bb=add(a,ring(t2)),cc=add(b,ring(t2)),dd=add(b,ring(t1));this.quad(aa,bb,cc,dd,col);}return this;}
+  cyl(x,y,z,r,h,col,sides=10){this.rod([x,y-h/2,z],[x,y+h/2,z],r,col,sides);const p=[x,y+h/2,z];for(let i=0;i<sides;i++){const a=i*TAU/sides,b=(i+1)*TAU/sides;this.tri(p,[x+r*Math.cos(a),p[1],z+r*Math.sin(a)],[x+r*Math.cos(b),p[1],z+r*Math.sin(b)],col);}return this;}
+  ellipse(x,y,z,rx,rz,col,steps=18){for(let i=0;i<steps;i++){const a=i*TAU/steps,b=(i+1)*TAU/steps;this.tri([x,y,z],[x+rx*Math.cos(b),y,z+rz*Math.sin(b)],[x+rx*Math.cos(a),y,z+rz*Math.sin(a)],col);}return this;}
+  line(points,r,col){for(let i=0;i<points.length-1;i++)this.rod(points[i],points[i+1],r,col,5);return this;}
+  data(){return new Float32Array(this.v);}
+}
+function viewMatrix(eye,center){const z=norm(sub(eye,center)),x=norm(cross([0,1,0],z)),y=cross(z,x);return new Float32Array([x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-(x[0]*eye[0]+x[1]*eye[1]+x[2]*eye[2]),-(y[0]*eye[0]+y[1]*eye[1]+y[2]*eye[2]),-(z[0]*eye[0]+z[1]*eye[1]+z[2]*eye[2]),1]);}
+function perspective(fov,aspect,near,far){const f=1/Math.tan(fov/2);return new Float32Array([f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0]);}
+function mult4(a,b){const o=new Float32Array(16);for(let c=0;c<4;c++)for(let r=0;r<4;r++)o[c*4+r]=a[r]*b[c*4]+a[4+r]*b[c*4+1]+a[8+r]*b[c*4+2]+a[12+r]*b[c*4+3];return o;}
+function project(m,p,w,h){const v=[p[0],p[1],p[2],1];let r=[0,0,0,0];for(let i=0;i<4;i++)r[i]=m[i]*v[0]+m[4+i]*v[1]+m[8+i]*v[2]+m[12+i]*v[3];if(r[3]<=0)return null;return [(r[0]/r[3]+1)*w*.5,(1-r[1]/r[3])*h*.5,r[2]/r[3]];}
+class GLView{
+  constructor(canvas){this.canvas=canvas;this.gl=canvas.getContext('webgl2',{antialias:true,alpha:false,depth:true,powerPreference:'high-performance',preserveDrawingBuffer:false});if(!this.gl)throw Error('WebGL 2 indisponível');const gl=this.gl;
+    const vs=`#version 300 es
+    in vec3 pos; in vec3 normal; in vec3 color;
+    uniform mat4 vp; uniform vec3 camPos;
+    out vec3 vColor; out vec3 vNormal; out vec3 vPos;
+    void main(){vColor=color;vNormal=normal;vPos=pos;gl_Position=vp*vec4(pos,1.0);}`;
+    const fs=`#version 300 es
+    precision highp float;
+    in vec3 vColor; in vec3 vNormal; in vec3 vPos; uniform vec3 camPos;out vec4 frag;
+    void main(){vec3 N=normalize(vNormal);vec3 sun=normalize(vec3(-0.43,0.88,0.45));vec3 bounce=normalize(vec3(0.71,0.35,-0.45));
+      float light=.71+.29*max(dot(N,sun),0.0)+.105*max(dot(N,bounce),0.0);
+      float rim=pow(1.0-max(dot(N,normalize(camPos-vPos)),0.0),2.5)*.055;
+      vec3 c=vColor*light+vec3(.92,.98,1.0)*rim;
+      frag=vec4(clamp(c,0.0,1.0),1.0);}`;
+    const compile=(t,s)=>{const shader=gl.createShader(t);gl.shaderSource(shader,s);gl.compileShader(shader);if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(shader));return shader;};const program=gl.createProgram();gl.attachShader(program,compile(gl.VERTEX_SHADER,vs));gl.attachShader(program,compile(gl.FRAGMENT_SHADER,fs));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+    this.program=program;this.vp=gl.getUniformLocation(program,'vp');this.camPos=gl.getUniformLocation(program,'camPos');this.loc=[gl.getAttribLocation(program,'pos'),gl.getAttribLocation(program,'normal'),gl.getAttribLocation(program,'color')];gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.disable(gl.CULL_FACE);gl.clearColor(.956,.984,1,1);
+  }
+  buffer(array,dynamic=false){const gl=this.gl,b={count:array.length/9,capacity:array.byteLength,handle:gl.createBuffer()};gl.bindBuffer(gl.ARRAY_BUFFER,b.handle);gl.bufferData(gl.ARRAY_BUFFER,array,dynamic?gl.DYNAMIC_DRAW:gl.STATIC_DRAW);return b;}
+  update(b,array){const gl=this.gl;gl.bindBuffer(gl.ARRAY_BUFFER,b.handle);if(array.byteLength>b.capacity){gl.bufferData(gl.ARRAY_BUFFER,array,gl.DYNAMIC_DRAW);b.capacity=array.byteLength;}else if(array.byteLength){gl.bufferSubData(gl.ARRAY_BUFFER,0,array);}b.count=array.length/9;}
+  begin(m,pos){const gl=this.gl;gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(this.program);gl.uniformMatrix4fv(this.vp,false,m);gl.uniform3fv(this.camPos,pos);}
+  draw(b){if(!b?.count)return;const gl=this.gl;gl.bindBuffer(gl.ARRAY_BUFFER,b.handle);for(let i=0;i<3;i++){gl.enableVertexAttribArray(this.loc[i]);gl.vertexAttribPointer(this.loc[i],3,gl.FLOAT,false,36,i*12);}gl.drawArrays(gl.TRIANGLES,0,b.count);}
+  resize(){const c=this.canvas;const w=Math.max(1,Math.round(c.clientWidth*Math.min(window.devicePixelRatio||1,1.65))),h=Math.max(1,Math.round(c.clientHeight*Math.min(window.devicePixelRatio||1,1.65)));if(c.width!==w||c.height!==h){c.width=w;c.height=h;}}
+}
+const FLOORS=3,PER_FLOOR=6,FLOOR_HEIGHT=5.6,ROOM_X=[-10.7,0,10.7],ROOM_Z=[-6.1,6.1];
+const rooms=Array.from({length:18},(_,id)=>{const fi=Math.floor(id/6),k=id%6,col=k%3,row=Math.floor(k/3);return {id,index:id,floor:fi+1,code:(fi+1)*100+k+1,x:ROOM_X[col],z:ROOM_Z[row],y:fi*FLOOR_HEIGHT,row,col};});
+const roomByPatient=(id)=>rooms[Math.floor((Number(String(id).replace('p',''))-1)/2)||0]||rooms[0];
+// Adapt the repeating detail to the friendly pastel palette while keeping contrast.
+function roomGeometry(g,room){const {x,z,y,row,col,code}=room,base=y;
+ g.push(x,base,z);
+ // Porcelain tile flooring + darker porcelain grout and perimeter edge.
+ g.box(0,-.015,0,9.85,.13,7.55,C.border,C.floor);
+ for(let tx=-4.55;tx<4.8;tx+=.83)for(let tz=-3.35;tz<3.5;tz+=.83){const even=(Math.round(tx/.83)+Math.round(tz/.83))%3===0;g.box(tx+.38,.062,tz+.39,.79,.017,.79,even?'#eff8fa':'#f9fdfe');}
+ // Back wall, lowered for front-facing bank so room contents remain visible.
+ const rearZ=row===0?-3.68:3.68, backH=row===0?2.76:1.22;
+ g.box(0,backH/2+.12,rearZ,9.72,backH,.22,row===0?C.wall:C.wall2,'#e6f7fc');
+ g.box(0,backH+.14,rearZ,9.78,.09,.29,C.wallTrim);
+ g.box(-4.79,1.34,0,.19,2.55,7.42,'#d4eaf5','#f1fbfe');
+ g.box(4.79,.42,0,.18,.66,7.45,'#bce3f1','#d7f2fa');
+ g.box(-4.79,2.66,-1.1,.22,.10,5.12,'#83c6df');
+ // Wall skirting + accent stripe.
+ g.box(0,.22,rearZ+.08,9.6,.17,.22,C.wallTrim);
+ if(row===0){
+   // Modern glazed window with translucent relief, blinds and sill.
+   g.box(0,1.96,rearZ+.16,2.82,1.12,.12,'#6cafcd');
+   g.box(0,1.96,rearZ+.23,2.56,.87,.04,'#b5e5f6');
+   g.box(0,1.96,rearZ+.25,.08,.94,.06,'#edfaff');
+   for(let i=0;i<4;i++)g.box(0,1.58+i*.24,rearZ+.27,2.55,.018,.022,'#91cade');
+   g.box(0,1.36,rearZ+.39,3.06,.09,.42,C.paper);
+   // poster landscape and a subtle cream frame.
+   g.box(3.35,1.99,rearZ+.18,1.1,.82,.14,'#fcf8f0');
+   g.box(3.35,1.99,rearZ+.265,.92,.66,.035,'#b5e0e5');
+   g.box(3.24,1.88,rearZ+.297,.48,.18,.025,C.mint);
+   g.sphere(3.60,2.19,rearZ+.314,.11,.11,.035,'#fff6ba',10,5);
+ }
+ // Ambient headboard panel, outlets and nursing call button for each bed.
+ for(const bx of [-2.22,2.22]){
+   g.box(bx,1.82,rearZ+(row===0?.32:-.27),2.35,.31,.22,'#9dd7ec');
+   for(let j=0;j<3;j++)g.cyl(bx-.65+j*.65,1.84,rearZ+(row===0?.47:-.43),.082,.06,j===0?'#77cdb6':j===1?'#f4fdff':'#87bcd3',9);
+   g.box(bx+1.15,1.24,rearZ+(row===0?.37:-.34),.17,.28,.12,C.rose);
+ }
+ // Upper storage, downlight and shelf.
+ g.box(-3.85,2.24,rearZ+(row===0?.20:-.17),.75,.74,.32,'#eaf4f7','#fff');
+ for(let j=0;j<2;j++)g.box(-3.85,2.08+j*.32,rearZ+(row===0?.39:-.36),.52,.022,.04,C.steel);
+ g.sphere(3.0,2.47,-2.65,.16,.13,.16,'#fef5c9',10,6);
+ // Two detailed patient stations.
+ [-2.23,2.23].forEach((bx,k)=>{
+    bedGeometry(g,bx,-.06,k%2?C.mintLt:'#d0e8f9');
+    infusionStand(g,bx+(k===0?1.04:-1.04),.72,k);
+    monitor(g,bx+(k===0?1.06:-1.06),-1.55,k);
+    nightstand(g,bx+(k===0?-1.35:1.35),-1.05);
+ });
+ // Partially folded privacy curtain and sideboard.
+ g.rod([0,2.4,-3.18],[0,2.4,-.95],.043,C.steel);
+ for(let j=0;j<7;j++){const zz=-3.12+j*.25;g.box(.18+Math.sin(j*1.7)*.06,1.58,zz,.10,1.52,.20,j%2?'#c0e5f4':'#e0f3fa');}
+ g.box(-3.72,.39,2.48,.96,.76,.72,'#d5e7ec','#f7fcff');
+ g.box(-3.72,.82,2.48,1.02,.10,.77,'#eef8fb');
+ // Small tactile handrails and a wood-and-green plant.
+ g.rod([-4.57,1.06,.5],[-4.57,1.06,2.8],.047,'#83b9d0');
+ g.cyl(3.78,.26,2.64,.35,.50,C.wood,11);
+ for(let p=0;p<4;p++){const a=p*TAU/4;g.rod([3.78,.49,2.64],[3.78+Math.cos(a)*.36,1.2,2.64+Math.sin(a)*.33],.09,C.plantDark);g.sphere(3.78+Math.cos(a)*.4,1.16,2.64+Math.sin(a)*.37,.29,.37,.23,C.plant,9,5);}
+ // Room plate, blue hanging lamp over beds.
+ g.box(3.9,.82,3.59,1.18,.58,.06,'#f5fdff');
+ for(const bx of [-2.23,2.23]){g.cyl(bx,2.86,-.8,.32,.09,C.paper,10);g.rod([bx,2.91,-.8],[bx,3.28,-.8],.032,C.metal);}
+ g.pop();
+}
+// Curved quilt made from smooth mesh instead of a flat block across the body.
+function shapedQuilt(g,shade){
+ const widths=[-.74,-.57,-.36,-.14,.14,.36,.57,.74],lengths=[-.23,-.07,.17,.48,.83,1.16,1.42,1.65];
+ const top=(xx,zz)=>1.11+.105*(1-Math.pow(xx/.78,2))+.025*Math.sin(zz*1.8)+.016*Math.cos(xx*6+zz*1.4);
+ for(let j=0;j<lengths.length-1;j++)for(let i=0;i<widths.length-1;i++){
+   const x0=widths[i],x1=widths[i+1],z0=lengths[j],z1=lengths[j+1];
+   const n=(x,z)=>norm([.22*x/.74,1,.04*Math.sin(z*1.8)]);
+   const a=[x0,top(x0,z0),z0],b=[x1,top(x1,z0),z0],c=[x1,top(x1,z1),z1],d=[x0,top(x0,z1),z1];
+   const cloth=(j%3===1&&i%3===2)?'#c5e9f4':shade;
+   g.vertex(a,n(x0,z0),cloth);g.vertex(c,n(x1,z1),cloth);g.vertex(b,n(x1,z0),cloth);
+   g.vertex(a,n(x0,z0),cloth);g.vertex(d,n(x0,z1),cloth);g.vertex(c,n(x1,z1),cloth);
+ }
+ for(const sx of [-.74,.74])for(let j=0;j<lengths.length-1;j++){
+   const z0=lengths[j],z1=lengths[j+1],yy=top(sx,z0),yx=top(sx,z1),x=sx;
+   g.quad([x,yy,z0],[x,1.02,z0],[x,1.02,z1],[x,yx,z1],'#a9d5e7');
+ }
+ for(let i=0;i<widths.length-1;i++){
+   const a=widths[i],b=widths[i+1];g.quad([a,top(a,1.65),1.65],[a,1.02,1.65],[b,1.02,1.65],[b,top(b,1.65),1.65],'#add7e7');
+ }
+ g.line([[-.73,top(-.73,-.23)+.009,-.25],[0,top(0,-.23)+.014,-.25],[.73,top(.73,-.23)+.009,-.25]],.017,'#ffffff');
+ // Fine piping and loose folds keep it tactile without crossing the chest.
+ for(const sx of [-.56,.56])g.line([[sx,top(sx,-.04)+.012,-.04],[sx,top(sx,.72)+.012,.72],[sx,top(sx,1.5)+.012,1.5]],.011,'#e5f8fa');
+}
+function bedGeometry(g,x,z,blanket){
+ g.push(x,0,z);
+ g.ellipse(.10,.084,.13,1.13,2.04,'#dcebf0');
+ for(const dx of [-.65,.65])for(const dz of [-1.40,1.43]){g.cyl(dx,.27,dz,.115,.19,'#92acba',10);g.rod([dx,.2,dz],[dx,.70,dz],.047,C.steel);}
+ g.box(0,.64,0,1.74,.19,3.77,'#a4c6d7','#c5e0ec');
+ g.box(0,.83,0,1.64,.26,3.60,'#d9edf4','#f9feff');
+ // Pillow is a rounded cushion, not a plank behind the patient's head.
+ g.sphere(0,1.027,-1.28,.66,.16,.41,'#fafdff',20,12);
+ g.sphere(-.27,1.08,-1.28,.16,.045,.29,'#ffffff',13,7);
+ shapedQuilt(g,blanket==C.mintLt?'#c8ebe4':'#c7e7f7');
+ // Side rails deliberately remain OUTSIDE the body and bedding bounds.
+ for(const side of [-1,1]){
+  const xx=side*.872;
+  g.rod([xx,.72,-.67],[xx,.72,1.32],.037,'#9db8c8');
+  g.rod([xx,1.21,-.27],[xx,1.21,1.27],.039,'#8aaec5');
+  for(const zz of [-.19,.35,.89,1.24])g.rod([xx,.74,zz],[xx,1.20,zz],.029,'#a8c3d0');
+ }
+ g.box(0,1.025,-1.84,1.76,.76,.13,'#a7ccdd','#e6f7ff');
+ g.box(0,.93,1.84,1.73,.57,.14,'#afcfe1','#edfaff');
+ g.box(0,.54,1.94,1.50,.08,.12,'#77b3d0');
+ g.pop();
+}
+function infusionStand(g,x,z,variant){
+ g.push(x,0,z);
+ g.ellipse(0,.086,0,.37,.32,'#deedf3');
+ for(let a=0;a<4;a++){const t=a*Math.PI/2;g.rod([0,.18,0],[Math.cos(t)*.35,.18,Math.sin(t)*.35],.055,C.steel);g.sphere(Math.cos(t)*.35,.12,Math.sin(t)*.35,.10,.10,.10,C.bed,8,5);}
+ g.rod([0,.18,0],[0,2.77,0],.041,'#b4ccd8');
+ g.rod([-.27,2.78,0],[.28,2.78,0],.048,C.steel);
+ g.rod([-.28,2.78,0],[-.28,2.64,0],.035,C.steel);
+ // IV bag and tube. The clear bag is a light pastel silhouette (opaque on purpose).
+ g.box(-.28,2.38,0,.25,.43,.14,variant?'#cceef1':'#daeffe','#f5fcff');
+ g.box(-.28,2.16,0,.09,.055,.09,'#6fb9cf');
+ g.line([[-.28,2.16,0],[-.24,1.72,0],[-.06,1.31,.17],[.03,1.00,.37]],.013,'#b0dfe8');
+ // Infusion pump with a display, two controls and indicator light.
+ g.box(.10,1.82,.08,.43,.56,.28,C.paper,'#f6fdff');
+ g.box(.10,1.93,.238,.31,.22,.018,C.screen);
+ g.box(.04,1.97,.257,.18,.036,.012,'#86e8d1');
+ for(let i=0;i<3;i++)g.sphere(-.04+i*.13,1.71,.242,.036,.037,.017,i===0?C.mint:C.blue,8,4);
+ g.pop();
+}
+function monitor(g,x,z,j){
+ g.push(x,0,z);
+ g.rod([0,.90,0],[0,1.58,0],.045,C.steel);
+ g.rod([0,1.59,0],[-.22,1.72,.05],.043,C.metal);
+ g.box(-.22,1.77,.06,.94,.68,.16,C.paper,'#f7fcff');
+ g.box(-.22,1.79,.154,.78,.49,.034,C.screen);
+ // Pulse waveform visible in 3D; tiny moving pointer is drawn as an actor.
+ const pts=[[-.57,1.76,.183],[-.48,1.76,.183],[-.39,1.84,.183],[-.31,1.64,.183],[-.22,1.99,.183],[-.13,1.77,.183],[-.05,1.77,.183],[.10,1.77,.183]];
+ g.line(pts,.013,'#84eac6');
+ g.box(.12,1.55,.151,.085,.03,.015,j?'#ffcaa0':'#73dcb5');
+ g.pop();
+}
+function nightstand(g,x,z){g.push(x,0,z);g.box(0,.57,0,.82,1.03,.76,'#d7e8ee','#edf8fc');g.box(0,1.1,0,.91,.13,.86,C.woodTop);for(let i=0;i<2;i++){g.box(0,.49+i*.31,.398,.62,.24,.04,'#f3fcff');g.rod([-.15,.47+i*.31,.43],[.15,.47+i*.31,.43],.016,C.steel);}g.cyl(.24,1.27,-.17,.11,.17,C.paper);g.cyl(.24,1.38,-.17,.035,.12,C.mint);g.pop();}
+function corridor(g,fi){const y=fi*FLOOR_HEIGHT;g.push(0,y,0);
+ g.box(0,.042,0,34.0,.14,4.95,'#edf7fb');
+ for(let x=-16.5;x<16.5;x+=1.0){g.box(x+.45,.123,0,.96,.015,4.82,x%3<1?'#e9f5f9':'#f6fbfd');}
+ // Pastel wayfinding band, recessed arrows and guide strips.
+ g.box(0,.145,-1.96,32.2,.025,.13,C.baby);
+ g.box(0,.145,1.99,32.2,.025,.13,C.baby);
+ for(const x of [-13.5,-8,-2.5,3,8.5,14]){
+   g.box(x,.148,-.44,.82,.017,.08,'#c1e4f1');
+   g.box(x+.37,.148,-.25,.08,.017,.40,'#c1e4f1');
+ }
+ // Nursing station in the center, a rounded desk and equipment.
+ g.ellipse(-.15,.14,.17,2.75,1.13,'#dceef1');
+ g.box(0,.62,0,3.9,1.11,1.17,'#b6dae7','#eefbfe');
+ g.box(0,1.21,0,4.20,.14,1.30,'#fff8eb');
+ g.box(0,.77,.656,3.46,.20,.10,'#78bfd8');
+ for(const mx of [-.83,.88]){
+   g.box(mx,1.69,-.27,.70,.47,.10,C.steel,'#edf6fa');
+   g.box(mx,1.70,-.208,.59,.34,.025,C.screen);
+   g.box(mx,1.40,-.10,.22,.05,.27,'#9db9ca');
+   g.box(mx,1.28,-.10,.67,.032,.25,'#f5fbfd');
+ }
+ g.box(.08,1.32,.32,.55,.06,.38,'#a6c9d7');
+ for(const xx of [-.85,.62,1.4])g.box(xx,1.32,.45,.28,.07,.21,xx<0?'#f4dba4':'#d2f0e5');
+ // Chair behind the counter; animated nurse sits here.
+ g.cyl(.10,.41,-1.25,.35,.14,C.blueDark,13);
+ g.rod([.10,.18,-1.25],[.10,1.10,-1.25],.062,C.steel);
+ g.box(.10,.85,-1.25,.83,.18,.73,'#88c4dd');
+ g.box(.10,1.30,-1.56,.83,.85,.14,'#a5dbee');
+ for(const x of [-16.4,16.4]){
+   g.ellipse(x,.12,0,1.05,1.0,'#daeaf0');g.cyl(x,.42,0,.40,.63,'#eee3d7',12);
+   for(let k=0;k<6;k++){const a=k*TAU/6;g.rod([x,.65,0],[x+Math.cos(a)*.53,1.5,Math.sin(a)*.52],.11,'#4e9a85');g.sphere(x+Math.cos(a)*.57,1.49,Math.sin(a)*.53,.28,.42,.25,k%2?C.plant:C.plantDark,8,5);}
+ }
+ // Clean-up cart with trays, oxygen cylinders and first aid emblem.
+ g.push(-7.4,0,.15);for(const xx of [-.55,.55])for(const zz of [-.34,.34])g.cyl(xx,.18,zz,.13,.11,C.bed,8);
+ for(const xx of [-.50,.50])for(const zz of [-.34,.34])g.rod([xx,.24,zz],[xx,1.46,zz],.036,C.steel);
+ g.box(0,.73,0,1.18,.10,.85,C.metal);g.box(0,1.38,0,1.18,.10,.85,C.paper);
+ g.box(.05,1.53,-.12,.37,.22,.29,'#cde9f6');g.cyl(-.36,1.67,.08,.14,.50,'#e8f2f8');g.box(-.36,1.94,.08,.22,.08,.18,'#7ac9b4');g.pop();
+ // Elevator door at corridor end, blue border and control column.
+ g.box(16.4,1.56,0,.13,3.04,2.16,C.blueDark);
+ g.box(16.45,1.60,0,.13,2.80,1.88,'#d1e9ee');
+ g.box(16.54,1.60,0,.03,2.75,.055,'#9ab8c7');
+ g.box(16.52,1.50,-1.40,.18,.48,.22,C.paper);g.sphere(16.67,1.57,-1.4,.05,.05,.05,C.mint,8,4);
+ g.pop();
+}
+function floorGeometry(fi){const g=new Builder(),base=fi*FLOOR_HEIGHT;
+ // Architectural slab and its navy/ice-blue fascia.
+ g.box(0,base-.36,0,34.65,.63,20.85,'#a5cada','#d9e8ef');
+ g.box(0,base-.07,0,34.45,.11,20.65,'#f2f9fb');
+ g.box(0,base-.70,10.43,34.65,.08,.12,C.blue);
+ for(const r of rooms.filter(q=>q.floor===fi+1))roomGeometry(g,r);
+ corridor(g,fi);
+ return g.data();}
+// Animated hospital characters. Head, shoulder, hands and feet are generated in
+// their correct positions in 3D every frame; coughs do not replace the mattress.
+const skinTones=['#e5ae8c','#f1c4a2','#c98f6d','#deaa86','#efc7ab','#b78265'];
+const hairTones=['#4b3c43','#7a5042','#5b4a38','#8c6651','#534b4a'];
+// Soft, toy-like characters inspired by the supplied friendly 3D references.
+// Coordinates are kept separate from the mattress/blanket and do not share meshes.
+function curvedMouth(g,x,y,z,width,smile,col){
+ const pts=[];for(let i=0;i<=7;i++){const t=i/7,xx=(t-.5)*width;pts.push([x+xx,y+smile*(Math.abs(t-.5)*2)**2,z+.016*(1-(t-.5)**2)]);}
+ g.line(pts,.011,col);
+}
+function handWithFingers(g,a,skin,dir){
+ g.sphere(...a,.102,.085,.103,skin,12,8);
+ for(let k=0;k<4;k++){const xx=a[0]+(k-1.5)*.041;g.capsule([xx,a[1]-.024,a[2]+dir*.035],[xx,a[1]-.028,a[2]+dir*(.106+(k===1||k===2?.014:0))],.020,skin,7);}
+}
+function patientGeometry(g,p,fi,animatedTime,coughPhase){
+ const room=rooms[Math.floor(p/2)],bedX=room.x+(p%2===0?-2.23:2.23);
+ const skin=skinTones[p%skinTones.length],hair=hairTones[p%hairTones.length];
+ const gown=['#80c8e5','#82d0c9','#93c6eb','#a8d6ed'][p%4];
+ const cough=coughPhase>=0&&coughPhase<1;
+ const pulse=cough?Math.pow(Math.sin(Math.PI*coughPhase),1.6)*(0.80+.20*Math.sin(coughPhase*7*Math.PI)**2):0;
+ const breathing=Math.sin(animatedTime*1.35+p*.65)*.010;
+ const lift=pulse*.082;
+ g.push(bedX,room.y,room.z-.06);
+ // Pillow supports the face: torso is light blue nursing gown rather than a giant gray oval.
+ g.sphere(0,1.211+breathing,-.58,.422,.158,.57,gown,18,12);
+ g.sphere(0,1.241+breathing,-.89,.431,.154,.382,gown,18,11);
+ // Slightly darker cuff, and V collar close to neckline.
+ g.line([[-.165,1.376,-1.075],[0,1.335,-.925],[.165,1.376,-1.075]],.018,'#579ebd');
+ g.sphere(0,1.321,-1.139,.123,.115,.177,skin,12,8);
+ // Full cranium faces UP while reclining, rather than jutting horizontally
+ // into the pillow or clipping through the headboard. A shared local pose
+ // makes facial features, ears, and hair follow the exact same orientation.
+ const hy=1.52+lift,hz=-1.27+pulse*.025;
+ const pitch=-.96,cp=Math.cos(pitch),sp=Math.sin(pitch);
+ const headPoint=(xx,yy,zz)=>[xx,hy+cp*yy-sp*zz,hz+sp*yy+cp*zz];
+ const headShape=(xx,yy,zz,rx,ry,rz,col,steps=16,rings=11)=>{
+   const center=headPoint(xx,yy,zz);
+   g.sphere(center[0],center[1],center[2],rx,ry,rz,col,steps,rings,pitch);
+ };
+ // Separate hair shell and skull: no hard rectangular cuts on the silhouette.
+ headShape(0,0,0,.307,.338,.292,skin,24,18);
+ headShape(0,.169,-.108,.316,.184,.241,hair,22,14);
+ for(const side of [-1,1]){
+   // Ears are proportional to the head instead of oversized round plates.
+   headShape(side*.301,-.025,-.018,.058,.077,.065,skin,13,9);
+   headShape(side*.222,-.081,.199,.045,.028,.022,'#e7a8a0',11,7);
+   headShape(side*.271,.121,-.050,.063,.135,.114,hair,12,9);
+ }
+ // Soft curved fringe, placed above the eyes and away from the cheeks.
+ headShape(-.152,.255,.092,.154,.080,.102,hair,15,10);
+ headShape(.122,.275,.073,.164,.071,.105,hair,15,10);
+ // The eyes are attached to the FRONT surface of the tilted face.
+ for(const side of [-1,1]){
+   const xx=side*.108;
+   headShape(xx,.065,.260,.044,.052,.023,'#fffefd',15,10);
+   headShape(xx+side*.007,.063,.282,.024,.030,.013,'#364d62',13,9);
+   headShape(xx-.007,.081,.296,.009,.010,.006,'#ffffff',9,6);
+   g.rod(headPoint(xx-.048,.152,.225),headPoint(xx+.047,.154,.225),.010,hair,8);
+ }
+ headShape(0,-.039,.279,.038,.038,.046,skin,12,8);
+ if(pulse>.16){headShape(0,-.134,.268,.040,.039,.015,'#a66f78',12,8);}
+ else{
+   const smile=[];
+   for(let j=0;j<=8;j++){const t=j/8;smile.push(headPoint((t-.5)*.132,-.125+.021*Math.pow(2*t-1,2),.269));}
+   g.line(smile,.011,'#ae737a');
+ }
+ // Rounded shoulders and short scrub sleeves. Arms rest on the bedding.
+ for(const side of [-1,1]){
+  const shoulder=[side*.410,1.27+breathing,-.79];
+  const sleeveEnd=[side*.493,1.22+breathing,-.60];
+  g.capsule(shoulder,sleeveEnd,.16,gown,11);
+  let elbow=[side*.628,1.16,-.43],hand=[side*.57,1.19,-.13];
+  if(side===-1){elbow=[side*(.63-pulse*.09),1.16+pulse*.29,-.46-pulse*.20];hand=[side*(.57-pulse*.42),1.20+pulse*.35,-.13-pulse*.91];}
+  g.capsule(sleeveEnd,elbow,.095,skin,10);
+  g.capsule(elbow,hand,.081,skin,10);
+  handWithFingers(g,hand,skin,-1);
+ }
+ // Keep the gown smooth and clean, with no dot or badge on the chest.
+ g.pop();
+}
+function nurseGeometry(g,x,z,y,rot,mode,phase,elapsed){
+ // Local -Z is the face/front direction. angle is solved using atan2(dx,-dz).
+ g.push(x,y,z,rot);
+ const walking=mode==='walk'||mode==='return';
+ const ease=t=>{t=clamp(t,0,1);return t*t*(3-2*t);};
+ const seated=mode==='sitting'?1:mode==='stand'?1-ease(phase/.84):mode==='sit'?ease(phase/.88):0;
+ const down=seated*.23,bob=walking?.028*Math.cos(elapsed*10.5):0;
+ const gait=walking?Math.sin(elapsed*10.5):0;
+ const skin='#eabb9b',hair='#65463b',uniform='#83c9e7',trouser='#71b7d7';
+ const hip=1.13-down+bob;
+ g.ellipse(0,.08,0,.32,.31,'#d6e8ef');
+ // Bend both legs smoothly at hip and knee during sitting; no snapping into chair.
+ for(const side of [-1,1]){
+  const stride=gait*side;
+  const knee=[side*.205,mix(.61,.74,seated)+bob*.4,mix(.02,-.46,seated)+stride*.12*(1-seated)];
+  const ankle=[side*.205,.19,mix(.02,-.52,seated)+stride*.25*(1-seated)];
+  g.capsule([side*.19,hip-.04,.02],knee,.13,trouser,10);
+  g.capsule(knee,ankle,.099,trouser,10);
+  g.sphere(ankle[0],.17,ankle[2]-.14,.163,.112,.255,'#f7fdff',13,9);
+  g.sphere(ankle[0],.132,ankle[2]-.24,.15,.040,.12,'#c1d7e5',10,6);
+ }
+ // Smooth stylized scrub tunic (not a stick-figure coat).
+ g.sphere(0,1.58-down+bob,0,.405,.475,.252,uniform,19,12);
+ g.sphere(0,1.30-down+bob,.01,.392,.195,.250,uniform,16,9);
+ g.line([[-.175,1.885-down+bob,-.196],[0,1.738-down+bob,-.273],[.175,1.885-down+bob,-.196]],.025,'#4e9ebf');
+ g.box(0,1.535-down+bob,-.264,.152,.165,.025,'#eafdff');
+ g.box(0,1.559-down+bob,-.283,.125,.020,.009,'#7eacc0');
+ g.box(-.266,1.385-down+bob,-.235,.144,.105,.029,'#a7dded');
+ g.box(.269,1.385-down+bob,-.235,.144,.105,.029,'#a7dded');
+ // Animated shoulders, short sleeves, soft hands and articulated elbows.
+ for(const side of [-1,1]){
+  const swing=walking?side*gait*.18:0;
+  const a=[side*.397,1.79-down+bob,0];
+  const cuff=[side*.50,1.64-down+bob,-.055];
+  const elbow=mode==='care'&&side===-1?[side*.58,1.44-down+bob,-.28]:
+    [side*.585,1.40-down+bob,-.065+swing];
+  const hand=mode==='care'&&side===-1?[side*.30,1.45-down+bob,-.55]:
+    seated>.5?[side*.43,1.19-down+bob,-.40]:[side*.55,1.07-down+bob,-.12+swing*1.50];
+  g.capsule(a,cuff,.145,uniform,10);
+  g.capsule(cuff,elbow,.104,skin,10);
+  g.capsule(elbow,hand,.084,skin,9);
+  handWithFingers(g,hand,skin,-1);
+ }
+ // Neck and fully modeled friendly face, with sculpted hair and tiny smile.
+ g.sphere(0,2.024-down+bob,-.012,.12,.16,.13,skin,12,8);
+ const hy=2.275-down+bob;
+ g.sphere(0,hy,-.028,.296,.354,.288,skin,20,14);
+ for(const side of [-1,1]){
+  g.sphere(side*.289,hy-.022,-.025,.060,.095,.074,skin,10,7);
+  g.sphere(side*.231,hy-.055,-.213,.064,.035,.025,'#e9a49e',11,6);
+ }
+ g.sphere(0,hy+.247,.015,.305,.133,.285,hair,18,10);
+ g.sphere(-.14,hy+.235,-.16,.159,.087,.133,hair,12,7);
+ g.sphere(.130,hy+.269,-.132,.170,.072,.135,hair,12,7);
+ // Bun is on the BACK (+Z), while eyes and nose are at the FRONT (-Z).
+ g.sphere(0,hy+.055,.247,.20,.195,.17,hair,12,9);
+ g.sphere(.08,hy+.100,.34,.116,.119,.11,hair,12,8);
+ // Tiny white nursing cap with baby-blue cross, inspired by the provided 3D reference.
+ g.sphere(0,hy+.358,-.082,.219,.067,.188,'#f8feff',16,9);
+ g.box(0,hy+.387,-.244,.13,.112,.026,'#f8feff');
+ g.box(0,hy+.399,-.259,.030,.077,.013,'#71c8da');
+ g.box(0,hy+.400,-.267,.075,.026,.012,'#71c8da');
+ for(const side of [-1,1]){
+  const ex=side*.110;
+  g.sphere(ex,hy+.055,-.276,.058,.060,.038,'#fffefd',13,9);
+  g.sphere(ex+side*.009,hy+.053,-.311,.029,.037,.021,'#354f60',12,8);
+  g.sphere(ex-.008,hy+.077,-.328,.011,.013,.009,'#ffffff',8,5);
+  g.rod([ex-.049,hy+.153,-.244],[ex+.049,hy+.153,-.25],.010,hair,8);
+ }
+ g.sphere(0,hy-.017,-.317,.043,.043,.058,skin,12,8);
+ curvedMouth(g,0,hy-.123,-.283,.146,-.027,'#ae7078');
+ // Small clinic ID badge, fabric shoulder trim and white sneakers.
+ g.box(.23,1.66-down+bob,-.246,.17,.145,.025,'#fbffff');
+ g.box(.23,1.693-down+bob,-.266,.12,.022,.009,'#80bbd3');
+ g.pop();
+}
+class HospitalScene{
+ constructor(opts){this.canvas=opts.canvas;this.stage=opts.stage;this.markers=opts.markers;this.onSelect=opts.onSelect||(()=>{});this.onRoomSelect=opts.onRoomSelect||(()=>{});this.onChange=opts.onChange||(()=>{});
+   this.initializing=true;this.view='floor';this.floor=1;this.activeId='p1';this.animationOn=true;this.search='';this.status='Enfermeira no posto · monitoramento ilustrativo';this.camera={yaw:.75,elev:.85,radius:48,target:[0,1,0]};this.goal={yaw:.75,elev:.85,radius:48,target:[0,1,0]};this.clock=0;this.last=0;this.cough=null;this.nextCough=6;this.pointers=new Map();this.dragged=false;this.staticActiveId=this.activeId;this.actorDirty=true;this.sceneVisible=true;
+   this.buildMarkers();
+   try{this.renderer=new GLView(this.canvas);this.floorBase=Array.from({length:3},(_,i)=>floorGeometry(i));this.floors=this.floorBase.map((b,i)=>this.renderer.buffer(this.combineStatic(i)));this.actorBuffer=this.renderer.buffer(new Float32Array(),true);this.ready=true;}
+   catch(e){console.error('Clínica SAÚDE: WebGL não iniciado',e);this.ready=false;this.fallback(e);}
+   this.resize();this.setupControls();if('IntersectionObserver'in window){this.stageObserver=new IntersectionObserver(entries=>{this.sceneVisible=entries[0]?.isIntersecting!==false;});this.stageObserver.observe(this.stage);}this.setView('floor');this.initializing=false;this.frameHandle=requestAnimationFrame(t=>this.frame(t));
+ }
+ combineStatic(fi){const g=new Builder();for(let j=fi*12;j<(fi+1)*12;j++){if(`p${j+1}`!==this.activeId)patientGeometry(g,j,fi,0,-1);}nurseGeometry(g,.10,-1.25,fi*FLOOR_HEIGHT,Math.PI,'sitting',0,0);const a=this.floorBase[fi],b=g.data(),out=new Float32Array(a.length+b.length);out.set(a,0);out.set(b,a.length);return out;}
+ refreshStatic(){if(!this.renderer||!this.floors)return;const before=roomByPatient(this.staticActiveId).floor-1,after=roomByPatient(this.activeId).floor-1;for(const fi of new Set([before,after]))this.renderer.update(this.floors[fi],this.combineStatic(fi));this.staticActiveId=this.activeId;this.actorDirty=true;}
+ fallback(error){this.stage.classList.add('no-webgl');const div=document.createElement('div');div.className='fallback-3d';div.innerHTML='<b>Visualização 3D não disponível neste navegador</b><span>A interface e os dados continuam acessíveis. Ative a aceleração de hardware e recarregue para visualizar o modelo interativo.</span>';this.stage.appendChild(div);}
+ emit(){this.status='Enfermeira sentada no posto';if(!this.initializing)this.onChange({view:this.view,floor:this.floor,status:this.status});}
+ setView(v){if(!['building','floor','room'].includes(v))return;this.view=v;this.actorDirty=true;const room=roomByPatient(this.activeId),f=this.floor;
+   if(v==='building'){this.goal.target=[0,FLOOR_HEIGHT+1.3,0];this.goal.radius=88;this.goal.elev=.63;}
+   if(v==='floor'){this.goal.target=[0,(f-1)*FLOOR_HEIGHT+.9,0];this.goal.radius=47;this.goal.elev=.92;}
+   if(v==='room'){this.goal.target=[room.x,(f-1)*FLOOR_HEIGHT+1.20,room.z+.1];this.goal.radius=13.8;this.goal.elev=.73;}
+   this.updateMarkers();this.emit();
+ }
+ setFloor(f){f=clamp(Math.round(Number(f)||1),1,3);if(this.floor===f&&this.view==='floor')return;this.floor=f;if(roomByPatient(this.activeId).floor!==f){this.activeId=`p${(f-1)*12+1}`;this.refreshStatic();}this.setView('floor');}
+ setSelected(id){const room=roomByPatient(id);if(!room)return;const changed=this.activeId!==id;this.activeId=id;if(changed)this.refreshStatic();if(room.floor!==this.floor){this.floor=room.floor;this.setView('floor');}else if(this.view==='room')this.setView('room');this.updateMarkers();}
+ setPatients(data){this.patientData=data||[];this.updateMarkers();}
+ setSearch(v){this.search=String(v||'').toLowerCase().trim();this.updateMarkers();}
+ reset(){this.goal.yaw=.75;this.goal.elev=this.view==='building'?.63:this.view==='room'?.73:.92;this.setView(this.view);}
+ zoomBy(k){this.goal.radius=clamp(this.goal.radius/Number(k||1),6,132);}
+ animationToggle(){this.animationOn=!this.animationOn;this.actorDirty=true;this.emit();}
+ triggerCough(){this.cough={id:this.activeId,start:this.clock};this.setView('room');this.status='Paciente simulando tosse no leito';this.onChange({view:this.view,floor:this.floor,status:this.status});}
+ focusRoom(index,id){
+   const room=rooms[index]||roomByPatient(id);if(!room)return;
+   const nextId=id||`p${room.index*2+1}`;
+   if(nextId!==this.activeId){this.activeId=nextId;this.refreshStatic();}
+   this.floor=room.floor;this.setView('room');
+ }
+ buildMarkers(){this.markers.innerHTML='';this.markerMap=new Map();for(const r of rooms){const btn=document.createElement('button');btn.type='button';btn.className='room-marker';btn.innerHTML=`<strong>${r.code}</strong><span>2 leitos</span>`;btn.title=`Selecionar quarto ${r.code}`;btn.setAttribute('aria-label',`Abrir pacientes do quarto ${r.code}`);btn.addEventListener('click',()=>this.onRoomSelect(r.index,`p${r.index*2+1}`));this.markers.appendChild(btn);this.markerMap.set(r.index,btn);}
+   this.floorMarkers=[];for(let f=1;f<=3;f++){const b=document.createElement('button');b.type='button';b.className='building-floor-tag';b.innerHTML=`<strong>${f}º ANDAR</strong><small>6 quartos · 12 leitos</small>`;b.addEventListener('click',()=>this.setFloor(f));this.markers.appendChild(b);this.floorMarkers.push(b);}
+   const sign=document.createElement('div');sign.className='clinic-sign';sign.innerHTML='<span class="sign-icon">✚</span><span>CLÍNICA <strong>SAÚDE</strong></span>';this.markers.appendChild(sign);this.sign=sign;
+   this.bedMarkers=[0,1].map(k=>{const b=document.createElement('button');b.className='bed-marker';b.type='button';b.innerHTML=`<span class="marker-dot"></span><b>LEITO ${k?'B':'A'}</b>`;b.addEventListener('click',()=>this.onSelect(`p${roomByPatient(this.activeId).index*2+k+1}`));this.markers.appendChild(b);return b;});this.updateMarkers();}
+ updateMarkers(){if(!this.markerMap)return;this.markerMap.forEach((b,i)=>{const r=rooms[i],show=this.view==='floor'&&r.floor===this.floor;b.hidden=!show;b.classList.toggle('active',r===roomByPatient(this.activeId));const pa=this.patientData?.[i*2],pb=this.patientData?.[i*2+1],hay=`${r.code} ${pa?.name||''} ${pa?.bed||''} ${pb?.name||''} ${pb?.bed||''}`.toLowerCase();const match=!this.search||hay.includes(this.search);b.classList.toggle('filtered-out',!match);});this.floorMarkers.forEach(b=>b.hidden=this.view!=='building');this.sign.hidden=this.view!=='building';this.bedMarkers.forEach(b=>b.hidden=this.view!=='room');}
+ resize(){if(this.renderer)this.renderer.resize();}
+ setupControls(){const canvas=this.canvas;
+   canvas.tabIndex=0;
+   canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);this.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY});if(this.pointers.size===2){const q=[...this.pointers.values()];this.pinchDist=Math.hypot(q[0].lastX-q[1].lastX,q[0].lastY-q[1].lastY);}this.dragged=false;canvas.classList.add('dragging');});
+   canvas.addEventListener('pointermove',e=>{const p=this.pointers.get(e.pointerId);if(!p)return;const dx=e.clientX-p.lastX,dy=e.clientY-p.lastY;p.lastX=e.clientX;p.lastY=e.clientY;if(Math.hypot(e.clientX-p.x,e.clientY-p.y)>5)this.dragged=true;
+     if(this.pointers.size===1){if(e.shiftKey){const scale=this.goal.radius*.0013;this.goal.target[0]+=(Math.cos(this.goal.yaw)*-dx+Math.sin(this.goal.yaw)*dy)*scale;this.goal.target[2]+=(Math.sin(this.goal.yaw)*dx+Math.cos(this.goal.yaw)*dy)*scale;}else{this.goal.yaw-=dx*.007;this.goal.elev=clamp(this.goal.elev+dy*.006,.24,1.40);}}
+     else{const pts=[...this.pointers.values()];if(pts.length>=2){const dd=Math.hypot(pts[0].lastX-pts[1].lastX,pts[0].lastY-pts[1].lastY);if(this.pinchDist>0)this.zoomBy(dd/this.pinchDist);this.pinchDist=dd;}}
+   });
+   canvas.addEventListener('pointerup',e=>{const p=this.pointers.get(e.pointerId);this.pointers.delete(e.pointerId);if(this.pointers.size<2)this.pinchDist=0;canvas.classList.remove('dragging');if(p&&!this.dragged&&!this.pointers.size)this.pick(e);});
+   canvas.addEventListener('pointercancel',e=>{this.pointers.delete(e.pointerId);if(this.pointers.size<2)this.pinchDist=0;canvas.classList.remove('dragging');});
+   canvas.addEventListener('wheel',e=>{e.preventDefault();this.goal.radius=clamp(this.goal.radius*Math.exp(e.deltaY*.0012),6,135);},{passive:false});
+   canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','=','Escape'].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft')this.goal.yaw-=.13;if(e.key==='ArrowRight')this.goal.yaw+=.13;if(e.key==='ArrowUp')this.goal.elev=clamp(this.goal.elev+.09,.24,1.4);if(e.key==='ArrowDown')this.goal.elev=clamp(this.goal.elev-.09,.24,1.4);if(e.key==='+'||e.key==='=')this.zoomBy(1.14);if(e.key==='-')this.zoomBy(.88);if(e.key==='Escape'&&this.view==='room')this.setView('floor');});
+   if('ResizeObserver'in window){this.ro=new ResizeObserver(()=>this.resize());this.ro.observe(this.stage);}else window.addEventListener('resize',()=>this.resize());
+ }
+ pick(e){if(!this.pv||!this.cameraPos)return;const rect=this.canvas.getBoundingClientRect(),sx=(e.clientX-rect.left)/rect.width,sy=(e.clientY-rect.top)/rect.height;
+   const cam=this.cameraPos,t=this.camera.target,forward=norm(sub(t,cam)),right=norm(cross(forward,[0,1,0])),up=cross(right,forward),aspect=rect.width/Math.max(1,rect.height),tan=Math.tan(.64/2);
+   const dir=norm(add(forward,add(mul(right,(sx*2-1)*tan*aspect),mul(up,(1-2*sy)*tan))));const floorIndex=this.view==='building'?2:this.floor-1;
+   let result=null;for(let fi=floorIndex;fi>=0;fi--){const plane=fi*FLOOR_HEIGHT+.12;if(dir[1]>=0)continue;const tt=(plane-cam[1])/dir[1];if(tt<0)continue;const px=cam[0]+dir[0]*tt,pz=cam[2]+dir[2]*tt;
+     const match=rooms.find(r=>r.floor===fi+1&&Math.abs(r.x-px)<4.9&&Math.abs(r.z-pz)<3.8);if(match){result=match;break;}}
+   if(this.view==='room'){
+     const r=roomByPatient(this.activeId);
+     const pts=[-2.23,2.23].map(x=>project(this.pv,[r.x+x,r.y+1.24,r.z-.28],rect.width,rect.height));
+     // Room view: nearest bed/patient, without causing a room re-selection.
+     const dist=pts.map(p=>p?Math.hypot(p[0]-sx*rect.width,p[1]-sy*rect.height):Infinity);
+     const ix=dist[0]<=dist[1]?0:1;
+     if(dist[ix]<Math.max(90,rect.width*.19))this.onSelect(`p${r.index*2+ix+1}`);
+     return;
+   }
+   if(result){if(this.view==='building'){this.setFloor(result.floor);}else{this.onRoomSelect(result.index,`p${result.index*2+1}`);}}
+ }
+ animateActors(){const g=new Builder(),active=roomByPatient(this.activeId);
+   // Only the selected patient's articulated geometry is rebuilt each frame.
+   // Other 35 patients are static floor geometry: smooth animation, no CPU spikes.
+   const i=Number(this.activeId.slice(1))-1,r0=rooms[Math.floor(i/2)];
+   if(this.view==='building'||r0.floor===this.floor){
+     let cp=-1;
+     if(this.cough?.id===this.activeId){cp=(this.clock-this.cough.start)/2.3;if(cp>=1){this.cough=null;cp=-1;}}
+     else if(this.animationOn&&this.clock%13>=8.5&&this.clock%13<=10.8)cp=((this.clock%13)-8.5)/2.3;
+     patientGeometry(g,i,r0.floor,this.clock,cp);
+   }
+   // Subtle moving points on ECG monitors keep the environment visibly alive.
+   for(const r of rooms){if(this.view!=='building'&&r.floor!==this.floor)continue;
+     for(let k=0;k<2;k++){const bx=k===0?-2.23:2.23,monitorX=r.x+bx+(k===0?1.06:-1.06),xx=-.58+((this.clock*.25+k*.14+r.index*.07)%1)*.66;
+       g.sphere(monitorX+xx,r.y+1.81,r.z-1.55+.18,.034,.029,.017,'#99f3d2',7,5);
+     }
+   }
+   // Selected-room accent is an actual mesh in the correct floor plane.
+   const r=active;if(r.floor===this.floor&&this.view!=='building'){
+     const y=r.y+.16,x=r.x,z=r.z,d=4.76,h=3.65;
+     g.box(x,y,z-h,9.48,.03,.055,'#69c9bc');g.box(x,y,z+h,9.48,.03,.055,'#69c9bc');g.box(x-d,y,z,.055,.03,7.31,'#69c9bc');g.box(x+d,y,z,.055,.03,7.31,'#69c9bc');
+   }
+   return g.data();
+ }
+ updateHUD(){if(!this.pv)return;const w=this.canvas.clientWidth,h=this.canvas.clientHeight;const at=(el,p)=>{const q=project(this.pv,p,w,h);if(!q||q[0]<-30||q[0]>w+30||q[1]<-30||q[1]>h+30){el.style.display='none';return;}el.style.display='';el.style.left=`${q[0]}px`;el.style.top=`${q[1]}px`;};
+   if(this.view==='floor'){for(const r of rooms){const b=this.markerMap.get(r.index);if(b&&!b.hidden)at(b,[r.x,r.y+.26,r.z+2.68]);}}
+   if(this.view==='building'){this.floorMarkers.forEach((b,i)=>at(b,[15.4,i*FLOOR_HEIGHT+1.55,9.8]));at(this.sign,[0,3*FLOOR_HEIGHT+.52,0]);}
+   if(this.view==='room'){const r=roomByPatient(this.activeId);this.bedMarkers.forEach((b,k)=>{b.classList.toggle('active',this.activeId===`p${r.index*2+k+1}`);at(b,[r.x+(k===0?-2.23:2.23),r.y+1.69,r.z+.5]);});}
+ }
+ frame(now){const dt=this.last?Math.min(.32,(now-this.last)/1000):.016;this.last=now;if(this.animationOn){this.clock+=dt;}
+   const t=1-Math.exp(-dt*4.5);this.camera.radius=mix(this.camera.radius,this.goal.radius,t);this.camera.yaw=mix(this.camera.yaw,this.goal.yaw,t);this.camera.elev=mix(this.camera.elev,this.goal.elev,t);for(let i=0;i<3;i++)this.camera.target[i]=mix(this.camera.target[i],this.goal.target[i],t);
+   if(!this.sceneVisible||document.hidden){this.frameHandle=requestAnimationFrame(t=>this.frame(t));return;}
+   const c=this.camera;const radius=c.radius,ca=Math.cos(c.elev);this.cameraPos=[c.target[0]+radius*ca*Math.sin(c.yaw),c.target[1]+radius*Math.sin(c.elev),c.target[2]+radius*ca*Math.cos(c.yaw)];
+   const width=Math.max(1,this.canvas.clientWidth),height=Math.max(1,this.canvas.clientHeight),pv=mult4(perspective(.64,width/height,.12,220),viewMatrix(this.cameraPos,c.target));this.pv=pv;
+   if(this.renderer){this.renderer.begin(pv,this.cameraPos);
+     if(this.view==='building'){for(const floor of this.floors)this.renderer.draw(floor);}else this.renderer.draw(this.floors[this.floor-1]);
+     if(this.animationOn||this.actorDirty){this.renderer.update(this.actorBuffer,this.animateActors());this.actorDirty=false;}this.renderer.draw(this.actorBuffer);
+   }
+   this.updateHUD();
+   // Accessible visual cough indicator anchored to the actual animated patient.
+   const bubble=document.getElementById('coughBubble');if(bubble){if(this.cough&&this.view==='room'){const r=roomByPatient(this.cough.id),p=Number(this.cough.id.slice(1))-1,pt=project(pv,[r.x+(p%2===0?-2.23:2.23),r.y+2.15,r.z-1.4],width,height);if(pt){bubble.hidden=false;bubble.style.left=pt[0]+'px';bubble.style.top=pt[1]+'px';}else bubble.hidden=true;}else bubble.hidden=true;}
+   this.frameHandle=requestAnimationFrame(t=>this.frame(t));
+ }
+}
+window.HospitalScene=HospitalScene;
+})();
+
+  </script>
+  <script>
+/* Clínica SAÚDE — demonstração local (não clínica), dados integralmente fictícios. */
+(() => {
+'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const icon=(name,cls='')=>`<svg class="icon ${cls}"><use href="#icon-${name}"/></svg>`;
+const start=Date.now();
+const at=(minutes)=>start+minutes*60000;
+const patients=[
+  {id:'p1',name:'Ana Luiza Ribeiro',age:42,bed:'A-101',room:'Quarto 01',initials:'AR',diagnosis:'Acompanhamento pós-operatório',allergy:'Alergia a penicilinas (registro fictício)',heart:'78',spo2:'98',pressure:'118/76',temp:'36,6',note:'Paciente em observação. Evolução demonstrativa, sem correspondência com atendimento real.'},
+  {id:'p2',name:'Ricardo Menezes',age:56,bed:'A-102',room:'Quarto 01',initials:'RM',diagnosis:'Hidratação e observação clínica',allergy:'Nenhuma alergia informada na simulação',heart:'82',spo2:'97',pressure:'122/80',temp:'36,8',note:'Paciente confortável; continuidade dos cuidados conforme plano simulado.'},
+  {id:'p3',name:'Maria Clara Rodrigues',age:68,bed:'A-103',room:'Quarto 02',initials:'MR',diagnosis:'Acompanhamento clínico',allergy:'Alergia a dipirona (registro fictício)',heart:'74',spo2:'96',pressure:'130/84',temp:'37,0',note:'Monitoramento de sinais vitais e controle de cuidados programados.'},
+  {id:'p4',name:'Pedro Henrique Souza',age:31,bed:'A-104',room:'Quarto 02',initials:'PS',diagnosis:'Observação e repouso',allergy:'Nenhuma alergia informada na simulação',heart:'70',spo2:'99',pressure:'116/74',temp:'36,4',note:'Sem intercorrências registradas na evolução ilustrativa.'},
+  {id:'p5',name:'Juliana Campos',age:47,bed:'A-105',room:'Quarto 03',initials:'JC',diagnosis:'Cuidados clínicos programados',allergy:'Reação anterior a anti-inflamatórios (fictícia)',heart:'80',spo2:'98',pressure:'120/78',temp:'36,7',note:'Cuidados de rotina em andamento conforme programação fictícia.'},
+  {id:'p6',name:'Carlos Eduardo Lima',age:63,bed:'A-106',room:'Quarto 03',initials:'CL',diagnosis:'Observação clínica',allergy:'Nenhuma alergia informada na simulação',heart:'76',spo2:'97',pressure:'125/81',temp:'36,5',note:'Paciente em acompanhamento rotineiro demonstrativo.'}
+ ];
+// Expansão fictícia: 3 andares × 6 quartos × 2 leitos = 36 pacientes.
+const additionalNames=['Marina Teixeira','Gustavo Almeida','Elisa Carvalho','Felipe Andrade','Cecília Barros','Roberto Vieira','Sofia Pires','Daniel Freitas','Luana Mendes','André Rocha','Helena Costa','Bruno Nascimento','Isabela Pereira','Eduardo Dias','Camila Lopes','Henrique Batista','Beatriz Moura','Vitor Cardoso','Alice Farias','Samuel Ribeiro','Renata Martins','Thiago Oliveira','Patrícia Lima','Rafael Nunes','Lívia Gonçalves','Leandro Silva','Natália Duarte','João Paulo Pinto','Fernanda Azevedo','Otávio Monteiro'];
+for(let i=6;i<36;i++){
+ const name=additionalNames[i-6],parts=name.split(' '),room=Math.floor(i/2)%6+1,floor=Math.floor(i/12)+1;
+ patients.push({id:`p${i+1}`,name,age:29+(i*7)%49,initials:parts.map(x=>x[0]).join('').slice(0,2),diagnosis:['Observação clínica','Recuperação e repouso','Hidratação supervisionada','Acompanhamento pós-operatório'][i%4],allergy:i%5===0?'Alergia relatada na simulação — validar ficha':'Nenhuma alergia informada na simulação',heart:String(68+i*3%22),spo2:String(95+i%5),pressure:`${112+i*3%28}/${72+i%13}`,temp:`36,${i%9}`,note:'Registro fictício para demonstração de acompanhamento assistencial.'});
+}
+patients.forEach((p,i)=>{const fl=Math.floor(i/12)+1,num=fl*100+(Math.floor(i/2)%6)+1;p.room=`Quarto ${num} · ${fl}º andar`;p.bed=`${num}-${i%2===0?'A':'B'}`;p.floor=fl;p.roomIndex=Math.floor(i/2);});
+const tasks=[
+  {id:'t1',patient:'p1',type:'med',title:'Medicação — Paracetamol',detail:'Via oral · conferir prescrição fictícia',minutes:-12},
+  {id:'t2',patient:'p1',type:'iv',title:'Revisão da infusão',detail:'Soro fisiológico · verificação programada',minutes:9},
+  {id:'t3',patient:'p1',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:62},
+  {id:'t4',patient:'p2',type:'med',title:'Medicação — Ceftriaxona',detail:'Via intravenosa · prescrição fictícia',minutes:15},
+  {id:'t5',patient:'p2',type:'iv',title:'Revisão da infusão',detail:'Conferir acesso e programação fictícia',minutes:47},
+  {id:'t6',patient:'p2',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:100},
+  {id:'t7',patient:'p3',type:'med',title:'Medicação — Omeprazol',detail:'Via oral · prescrição fictícia',minutes:-7},
+  {id:'t8',patient:'p3',type:'iv',title:'Revisão da infusão',detail:'Conferir acesso e programação fictícia',minutes:22},
+  {id:'t9',patient:'p3',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:70},
+  {id:'t10',patient:'p4',type:'med',title:'Medicação — Paracetamol',detail:'Via oral · prescrição fictícia',minutes:22},
+  {id:'t11',patient:'p4',type:'iv',title:'Revisão da infusão',detail:'Conferência de acesso e volume',minutes:63},
+  {id:'t12',patient:'p4',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:110},
+  {id:'t13',patient:'p5',type:'med',title:'Medicação — Metoclopramida',detail:'Via oral · prescrição fictícia',minutes:12},
+  {id:'t14',patient:'p5',type:'iv',title:'Revisão da infusão',detail:'Conferência programada da infusão',minutes:49},
+  {id:'t15',patient:'p5',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:90},
+  {id:'t16',patient:'p6',type:'med',title:'Medicação — Losartana',detail:'Via oral · prescrição fictícia',minutes:34},
+  {id:'t17',patient:'p6',type:'iv',title:'Revisão da infusão',detail:'Conferir acesso e plano prescrito',minutes:88},
+  {id:'t18',patient:'p6',type:'vitals',title:'Verificar sinais vitais',detail:'Rotina assistencial simulada',minutes:135}
+].map(x=>({...x,at:at(x.minutes),doneAt:null}));
+for(let i=6;i<36;i++){
+ const id=`p${i+1}`,base=1+i*3;
+ [['med','Medicação programada','Conferir prescrição ilustrativa',i%7*11-9],['iv','Revisão da infusão','Inspecionar programação fictícia',24+i%9*8],['vitals','Verificar sinais vitais','Monitoramento demonstrativo',68+i%11*7]].forEach(([type,title,detail,minutes],j)=>tasks.push({id:`t${100+i*3+j}`,patient:id,type,title,detail,minutes,at:at(minutes),doneAt:null}));
+}
+
+let selected='p1', patientTab='summary', taskFilter='all', taskVisible=5, searchTerm='';
+const fmtTime=new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit'});
+const fmtDay=new Intl.DateTimeFormat('pt-BR',{weekday:'short',day:'2-digit',month:'short'});
+const escapeHtml=(s)=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const timeOf=t=>fmtTime.format(t.at);
+const getPatient=id=>patients.find(p=>p.id===id)||patients[0];
+const patientTasks=id=>tasks.filter(t=>t.patient===id).sort((a,b)=>a.at-b.at);
+const classification=(t,now=Date.now())=>t.doneAt?'done':t.at<=now?'overdue':t.at-now<=30*60*1000?'soon':'ok';
+const patientStatus=(id)=>{const a=patientTasks(id).map(t=>classification(t));return a.includes('overdue')?'overdue':a.includes('soon')?'soon':'ok';};
+const taskIcon=type=>type==='iv'?'droplet':type==='vitals'?'activity':'pill';
+const humanType=type=>type==='iv'?'Infusão':type==='vitals'?'Sinais vitais':'Medicação';
+function remaining(t){
+ if(t.doneAt)return 'Conferido';const d=Math.ceil((t.at-Date.now())/1000);const a=Math.abs(d);const h=Math.floor(a/3600),m=Math.floor(a%3600/60),s=a%60;return `${d<0?'-':''}${h?String(h).padStart(2,'0')+':':''}${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+function toast(text){const t=document.createElement('div');t.className='toast';t.textContent=text;$('#toasts').appendChild(t);setTimeout(()=>{t.remove();},4700)}
+let scene=null;
+function updateMetrics(){
+ $('#metricPatients').textContent=String(patients.length).padStart(2,'0');
+ $('#metricTasks').textContent=String(tasks.length).padStart(2,'0');
+ $('#metricSoon').textContent=String(tasks.filter(t=>classification(t)==='soon').length).padStart(2,'0');
+ const late=tasks.filter(t=>classification(t)==='overdue').length;
+ $('#metricLate').textContent=String(late).padStart(2,'0');
+ $('#notificationDot').style.display=late?'block':'none';
+ patients.forEach(p=>p.status=patientStatus(p.id));
+ scene?.setPatients(patients);
+}
+function conditionLabel(p){const s=patientStatus(p.id);return s==='overdue'?['danger','Há horário ultrapassado — verificar programação']:s==='soon'?['warning','Há cuidado previsto nos próximos 30 minutos']:['','Sem horários ultrapassados nesta simulação'];}
+function vitalsHTML(p){return `<div class="vitals-grid"><div class="vital-item"><span class="vital-label">${icon('heart','vital-mini')} Freq. cardíaca</span><strong>${escapeHtml(p.heart)} <span class="unit">bpm</span></strong></div><div class="vital-item"><span class="vital-label">${icon('activity','vital-mini')} Saturação</span><strong>${escapeHtml(p.spo2)} <span class="unit">%</span></strong></div><div class="vital-item"><span class="vital-label">${icon('trend','vital-mini')} Pressão arterial</span><strong>${escapeHtml(p.pressure)} <span class="unit">mmHg</span></strong></div><div class="vital-item"><span class="vital-label">${icon('activity','vital-mini')} Temperatura</span><strong>${escapeHtml(p.temp)} <span class="unit">°C</span></strong></div></div>`;}
+function patientCareHTML(p){return `<div class="patient-care-list">${patientTasks(p.id).map(t=>`<div class="patient-care"><span class="care-icon ${t.type}">${icon(taskIcon(t.type))}</span><div class="care-description"><strong>${escapeHtml(t.title)}</strong><span>${timeOf(t)} · ${escapeHtml(humanType(t.type))}</span></div><span class="care-countdown ${classification(t)==='overdue'?'overdue':t.doneAt?'done':''}" data-countdown="${t.id}">${remaining(t)}</span></div>`).join('')}</div>`;}
+function prescHTML(p){return `<div class="patient-care-list">${patientTasks(p.id).filter(t=>t.type==='med').map(t=>`<div class="prescription-row"><div><strong>${escapeHtml(t.title.replace('Medicação — ',''))}</strong><span>${escapeHtml(t.detail)}</span></div><div><strong>${timeOf(t)}</strong><span>Horário fictício</span></div></div>`).join('')}</div><div class="allergy-row"><span class="allergy-icon">ⓘ</span><div><strong>Prescrição simulada</strong><span>Doses, vias e horários reais exigem validação profissional. Nenhuma ação é executada pelo protótipo.</span></div></div>`;}
+function evolutionHTML(p){return `<div class="evolution-entry"><strong>Registro de demonstração · ${fmtTime.format(Date.now())}</strong>${escapeHtml(p.note)}</div><div class="evolution-entry"><strong>Plano de cuidados simulado</strong>${escapeHtml(p.diagnosis)}. Acompanhar os horários e registrar conferências do turno.</div>`;}
+function renderPatient(){
+ const p=getPatient(selected),[statusCls,condition]=conditionLabel(p);
+ $('#patientContent').innerHTML=`<div class="patient-content"><div class="patient-upper"><span class="patient-supra">FICHA DO PACIENTE</span><span class="bed-chip">${icon('beds')} ${escapeHtml(p.bed)}</span></div><div class="patient-identity"><div class="patient-avatar" aria-hidden="true">${escapeHtml(p.initials)}</div><div><h3 class="patient-name">${escapeHtml(p.name)}</h3><div class="patient-meta">${p.age} anos · ${escapeHtml(p.room)}</div><div class="patient-meta">${escapeHtml(p.diagnosis)}</div></div></div><div class="patient-condition ${statusCls}"><i></i> ${escapeHtml(condition)}</div><div class="patient-subsection-heading"><span>Sinais vitais</span><small>Último registro ilustrativo</small></div>${vitalsHTML(p)}<div class="patient-divider"></div><div class="patient-tabs" role="tablist" aria-label="Dados do paciente"><button type="button" role="tab" class="patient-tab ${patientTab==='summary'?'active':''}" aria-selected="${patientTab==='summary'}" data-patient-tab="summary">Cuidados</button><button type="button" role="tab" class="patient-tab ${patientTab==='prescription'?'active':''}" aria-selected="${patientTab==='prescription'}" data-patient-tab="prescription">Prescrição</button><button type="button" role="tab" class="patient-tab ${patientTab==='evolution'?'active':''}" aria-selected="${patientTab==='evolution'}" data-patient-tab="evolution">Evolução</button></div><div class="patient-tabs-body">${patientTab==='summary'?`<div class="patient-subsection-heading"><span>Próximas atividades</span><small>Tempo restante</small></div>${patientCareHTML(p)}`:patientTab==='prescription'?prescHTML(p):evolutionHTML(p)}</div><div class="allergy-row"><span class="allergy-icon">✳</span><div><strong>Alergias / observações</strong><span>${escapeHtml(p.allergy)}</span></div></div><div class="patient-footer"><button type="button" class="primary-action" id="fullRecord">${icon('files')} Ver ficha completa ${icon('arrow')}</button><button type="button" class="secondary-action" id="focusRoom">Ver quarto 3D</button></div><div class="patient-fineprint">Demonstração sem vínculo com prontuários, sistemas clínicos ou dispositivos de monitoramento.</div></div>`;
+ $$('.patient-tab').forEach(btn=>btn.addEventListener('click',()=>{patientTab=btn.dataset.patientTab;renderPatient()}));
+ $('#fullRecord').addEventListener('click',()=>openFullRecord(p.id));
+ $('#focusRoom').addEventListener('click',()=>selectPatient(p.id,{focus:true,inspect:true}));
+}
+function updateCountdowns(){$$('[data-countdown]').forEach(el=>{const t=tasks.find(t=>t.id===el.dataset.countdown);if(!t)return;el.textContent=remaining(t);el.classList.toggle('overdue',classification(t)==='overdue');el.classList.toggle('done',!!t.doneAt)});}
+function nextAgendaTasks(){let list=tasks.filter(t=>{const c=classification(t);return taskFilter==='done'?c==='done':taskFilter==='overdue'?c==='overdue':!t.doneAt;});if(searchTerm)list=list.filter(t=>{const p=getPatient(t.patient);return `${t.title} ${p.name} ${p.bed}`.toLowerCase().includes(searchTerm)});return list.sort((a,b)=>(a.doneAt?1:0)-(b.doneAt?1:0)||a.at-b.at)}
+function renderTasks(){const items=nextAgendaTasks(),shown=items.slice(0,taskVisible);
+ $('#taskList').innerHTML=shown.length?shown.map(t=>{const p=getPatient(t.patient),c=classification(t);return `<div class="task-row"><span class="task-icon ${t.type}">${icon(taskIcon(t.type))}</span><div class="task-body"><strong>${escapeHtml(t.title)}</strong><span>${escapeHtml(p.name)} · Leito ${escapeHtml(p.bed)} · ${escapeHtml(t.detail)}</span></div><div class="task-time ${c==='overdue'?'danger':c==='soon'?'warning':''}"><strong>${timeOf(t)}</strong><span data-countdown="${t.id}">${remaining(t)}</span></div>${c==='done'?'<span class="task-done">Conferido ✓</span>':`<button class="task-check" type="button" data-task="${t.id}">Conferir</button>`}</div>`;}).join(''):'<div class="empty-state">Nenhum cuidado encontrado neste filtro.</div>';
+ if(items.length>taskVisible){const more=document.createElement('button');more.className='secondary-action';more.style.cssText='display:block;margin:10px auto 3px;';more.textContent=`Mostrar mais ${Math.min(5,items.length-taskVisible)} cuidados`;more.addEventListener('click',()=>{taskVisible+=5;renderTasks()});$('#taskList').appendChild(more)}
+ $$('[data-task]').forEach(btn=>btn.addEventListener('click',()=>confirmTask(btn.dataset.task)));
+ updateCountdowns();
+}
+function selectPatient(id,options={}){
+  selected=id;patientTab='summary';scene.setSelected(id);
+  if(options.focus)scene.focusRoom(getPatient(id).roomIndex,id);
+  renderPatient();document.title=`Clínica SAÚDE · ${getPatient(id).bed}`;
+  if(options.inspect)openInspector(id);
+}
+function openRoom(roomIndex){
+  const first=`p${roomIndex*2+1}`;
+  selectPatient(first,{focus:true,inspect:true});
+}
+let inspectorReturnFocus=null;
+function patientCardHTML(p,active){
+  const st=patientStatus(p.id);
+  return `<button type="button" class="inspect-bed-choice ${active?'is-active':''}" data-inspect-patient="${p.id}" aria-pressed="${active}" aria-label="Ver paciente ${escapeHtml(p.name)}, leito ${escapeHtml(p.bed)}"><span class="inspect-bed-avatar">${escapeHtml(p.initials)}</span><span class="inspect-bed-copy"><small>LEITO ${p.bed.endsWith('-A')?'A':'B'}</small><strong>${escapeHtml(p.name)}</strong></span><span class="inspect-bed-status is-${st}" aria-hidden="true"></span></button>`;
+}
+function inspectorTaskHTML(t){
+  const c=classification(t);
+  const type=humanType(t.type);
+  return `<div class="inspect-timeline-row"><div class="inspect-task-symbol ${t.type}">${icon(taskIcon(t.type))}</div><div class="inspect-task-description"><strong>${escapeHtml(t.title)}</strong><span>${escapeHtml(t.detail)}</span><small>${escapeHtml(type)} · ${timeOf(t)}</small></div><div class="inspect-task-deadline ${c}"><strong data-countdown="${t.id}">${remaining(t)}</strong><small>${t.doneAt?'Conferido':c==='overdue'?'Atrasado':c==='soon'?'Em breve':'Programado'}</small></div></div>`;
+}
+function inspectorHTML(id){
+ const p=getPatient(id),roomPatients=patients.filter(x=>x.roomIndex===p.roomIndex),[cls,condition]=conditionLabel(p),soon=patientTasks(id).filter(t=>!t.doneAt);
+ const status=patientStatus(id);
+ return `<div class="inspector-top"><div class="inspector-kicker"><span class="inspect-kicker-dot"></span> VISUALIZAÇÃO ASSISTENCIAL <span class="inspect-demo">DEMO</span></div><button class="inspect-close" id="closeInspector" type="button" aria-label="Fechar ficha e voltar ao mapa">${icon('x')}</button></div>
+ <div class="inspect-room-head"><div><span class="inspect-floor">${p.floor}º ANDAR <span>•</span> DOIS LEITOS</span><h2 id="inspectorTitle">${escapeHtml(p.room.split(' ·')[0])}</h2><p>Selecione um paciente para consultar as informações do leito.</p></div><div class="inspect-room-icon">${icon('beds')}</div></div>
+ <div class="inspect-chooser" role="group" aria-label="Pacientes deste quarto">${roomPatients.map(x=>patientCardHTML(x,x.id===id)).join('')}</div>
+ <div class="inspect-section-label"><span class="inspect-label-dot"></span> FICHA DO PACIENTE</div>
+ <div class="inspect-profile"><div class="inspect-avatar-lg">${escapeHtml(p.initials)}</div><div class="inspect-profile-main"><h3>${escapeHtml(p.name)}</h3><p>${p.age} anos · Leito ${escapeHtml(p.bed)} · ${escapeHtml(p.diagnosis)}</p></div></div>
+ <div class="inspect-condition ${cls}"><i></i><span>${escapeHtml(condition)}</span></div>
+ <div class="inspect-section-label"><span class="inspect-label-dot"></span> SINAIS VITAIS <small>Registros fictícios</small></div>
+ <div class="inspect-vitals"><div class="inspect-vital"><span>${icon('heart')} FREQUÊNCIA CARDÍACA</span><strong>${escapeHtml(p.heart)} <small>bpm</small></strong></div><div class="inspect-vital"><span>${icon('activity')} SATURAÇÃO</span><strong>${escapeHtml(p.spo2)} <small>%</small></strong></div><div class="inspect-vital"><span>${icon('trend')} PRESSÃO ARTERIAL</span><strong>${escapeHtml(p.pressure)} <small>mmHg</small></strong></div><div class="inspect-vital"><span>${icon('clock')} TEMPERATURA</span><strong>${escapeHtml(p.temp)} <small>°C</small></strong></div></div>
+ <div class="inspect-section-label"><span class="inspect-label-dot"></span> CUIDADOS PROGRAMADOS <small>${soon.length} pendentes</small></div>
+ <div class="inspect-timeline">${patientTasks(id).map(inspectorTaskHTML).join('')}</div>
+ <div class="inspect-section-label"><span class="inspect-label-dot"></span> ALERGIAS E EVOLUÇÃO</div>
+ <div class="inspect-note"><strong>${icon('shield')} Alergias / observações</strong><p>${escapeHtml(p.allergy)}</p></div>
+ <div class="inspect-note note-soft"><strong>${icon('files')} Última evolução ilustrativa</strong><p>${escapeHtml(p.note)}</p></div>
+ <div class="inspect-bottom-actions"><button type="button" id="inspectorFullRecord" class="inspect-main-button">${icon('files')} Ver prontuário completo ${icon('arrow')}</button><button type="button" id="inspectorBackToRoom" class="inspect-quiet-button">Voltar ao mapa 3D</button></div>
+ <p class="inspect-disclaimer">Dados, prescrições e horários são fictícios. Nenhum atendimento é realizado por esta demonstração.</p>`;
+}
+function openInspector(id){
+ const layer=$('#patientInspector');
+ if(layer.hidden)inspectorReturnFocus=document.activeElement;
+ layer.hidden=false;document.body.classList.add('inspector-open');
+ renderInspector(id);
+ $('#closeInspector').focus({preventScroll:true});
+}
+function renderInspector(id){
+ const layer=$('#patientInspector');if(layer.hidden)return;
+ const scroll=$('#inspectorContent');const currentScroll=scroll.scrollTop;
+ scroll.innerHTML=inspectorHTML(id);scroll.scrollTop=currentScroll;
+ $$('#inspectorContent [data-inspect-patient]').forEach(b=>b.addEventListener('click',()=>{
+   const scrollY=$('#inspectorContent').scrollTop;
+   selectPatient(b.dataset.inspectPatient,{focus:true});
+   renderInspector(b.dataset.inspectPatient);$('#inspectorContent').scrollTop=scrollY;
+   $('#inspectorContent [data-inspect-patient="'+b.dataset.inspectPatient+'"]').focus({preventScroll:true});
+ }));
+ $('#closeInspector').addEventListener('click',closeInspector);
+ $('#inspectorBackToRoom').addEventListener('click',closeInspector);
+ $('#inspectorFullRecord').addEventListener('click',()=>{closeInspector();openFullRecord(id)});
+ updateCountdowns();
+}
+function closeInspector(){
+ if($('#patientInspector').hidden)return;
+ $('#patientInspector').hidden=true;document.body.classList.remove('inspector-open');
+ if(inspectorReturnFocus&&document.contains(inspectorReturnFocus)&&inspectorReturnFocus.getClientRects().length)inspectorReturnFocus.focus({preventScroll:true});
+ else $('#hospital3d').focus({preventScroll:true});
+ inspectorReturnFocus=null;
+}
+function updateMapUI(state={}){
+ if(scene&&selected!==scene.activeId){selected=scene.activeId;patientTab='summary';renderPatient();}
+ const mode=state.view||scene.view, floor=state.floor||scene.floor;
+ $$('[data-scene-view]').forEach(b=>{const active=b.dataset.sceneView===mode;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ $$('[data-floor]').forEach(b=>{const active=Number(b.dataset.floor)===floor && (mode!=='building'||!b.closest('.scene-fullscreen-nav'));b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ $('#modelCounter').textContent=mode==='building'?'3 andares · 18 quartos':mode==='floor'?'6 quartos · 12 leitos':`Quarto ${getPatient(scene.activeId).bed.split('-')[0]} · 2 leitos`;
+ $('#backToFloor').hidden=mode!=='room';
+ $('#sceneLocation').innerHTML=mode==='building'?'<span class="location-dot"></span> CLÍNICA SAÚDE <span class="location-slash">/</span> 3 ANDARES':`<span class="location-dot"></span> ${floor}º ANDAR <span class="location-slash">/</span> ${mode==='room'?getPatient(scene.activeId).room.toUpperCase().split(' ·')[0]:'6 QUARTOS'}`;
+ $('#nurseStatus').textContent='● '+(state.status||scene.status);
+ $('#toggleAnimation').textContent=scene.animationOn?'Ⅱ Pausar tosse':'▶ Retomar tosse';
+ $('#toggleAnimation').setAttribute('aria-pressed',String(scene.animationOn));
+}
+function setSceneView(view){scene.setView(view);updateMapUI();}
+function toggleExpanded(force){const stage=$('#sceneStage'),expanded=force===undefined?!stage.classList.contains('expanded'):Boolean(force);
+ stage.classList.toggle('expanded',expanded);document.body.classList.toggle('map-expanded',expanded);$('#closeExpanded').hidden=!expanded;
+ $('#expandMap').setAttribute('aria-label',expanded?'Fechar mapa ampliado':'Ampliar o mapa');requestAnimationFrame(()=>scene.resize());}
+
+function modal(html){$('#modalContent').innerHTML=html;$('#modalBackdrop').hidden=false;$('#modalContent').querySelector('button')?.focus();}
+function closeModal(){$('#modalBackdrop').hidden=true;$('#modalContent').innerHTML='';}
+function confirmTask(id){const t=tasks.find(q=>q.id===id);if(!t||t.doneAt)return;const p=getPatient(t.patient);
+ modal(`<p class="section-overline">REGISTRO FICTÍCIO</p><h3 id="modalHeading">Simular conferência do cuidado?</h3><p><strong>${escapeHtml(t.title)}</strong><br>${escapeHtml(p.name)} · ${escapeHtml(p.bed)}<br>Horário programado: ${timeOf(t)}</p><div class="modal-info">Esta ação apenas marca a atividade como conferida na interface de demonstração. Não administra medicamentos, não altera prescrições e não grava prontuários reais.</div><div class="modal-actions"><button type="button" class="secondary-action" id="cancelModal">Cancelar</button><button type="button" class="primary-action" id="confirmModal">${icon('check')} Marcar na demonstração</button></div>`);
+ $('#cancelModal').addEventListener('click',closeModal);$('#confirmModal').addEventListener('click',()=>{t.doneAt=Date.now();closeModal();updateMetrics();renderTasks();renderPatient();toast(`Conferência demonstrativa registrada: ${t.title}.`)});
+}
+function openFullRecord(id){const p=getPatient(id),list=patientTasks(id);
+ modal(`<p class="section-overline">PRONTUÁRIO INTEGRADO · DEMO</p><h3 id="modalHeading">${escapeHtml(p.name)}</h3><p><strong>${escapeHtml(p.bed)} · ${p.age} anos</strong><br>${escapeHtml(p.diagnosis)}</p><div class="modal-info"><b>Sinais vitais simulados</b><br>FC ${p.heart} bpm · SpO₂ ${p.spo2}% · PA ${p.pressure} mmHg · Temperatura ${p.temp} °C<br><br><b>Alergias e observações:</b> ${escapeHtml(p.allergy)}</div><h4 style="margin-bottom:6px;color:#4e7993">Agenda individual</h4>${list.map(t=>`<div class="prescription-row"><span>${escapeHtml(t.title)}</span><strong>${timeOf(t)} · ${t.doneAt?'Conferido na demo':'Pendente'}</strong></div>`).join('')}<div class="modal-actions"><button class="primary-action" type="button" id="closeRecord">Fechar ficha</button></div>`);
+ $('#closeRecord').addEventListener('click',closeModal);
+}
+function showAbout(){
+ modal(`<p class="section-overline">SOBRE O PROJETO</p>
+   <div class="about-cover"><span class="about-logo" aria-hidden="true">+</span><div><h3 id="modalHeading">Clínica SAÚDE</h3><span class="about-tagline">Central assistencial · experiência 3D</span></div></div>
+   <p>Este projeto apresenta uma central visual de acompanhamento de pacientes: um hospital navegável em 3D, com <strong>3 andares, 18 quartos e 36 leitos</strong>, fichas individuais, agenda de medicações e infusões e alertas por horário.</p>
+   <p>A enfermeira permanece sentada no posto. Ao clicar em um quarto, você visualiza seus dois leitos e pode abrir os dados de cada paciente. A simulação de tosse continua disponível.</p>
+   <div class="about-controls"><strong>Como explorar o mapa</strong><span>Arraste para girar, use a roda do mouse ou gesto de pinça para ampliar. Clique em um quarto para abrir a ficha dos pacientes; selecione o leito A ou B. Use <b>Voltar ao andar</b> para retornar.</span></div>
+   <div class="about-credits"><span>IDEALIZAÇÃO E CRÉDITOS</span><strong>Fabrício S. Melo</strong><a class="about-credit-link" href="https://www.linkedin.com/in/fabriciosmelo/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de Fabrício S. Melo no LinkedIn">Ver perfil no LinkedIn ↗</a></div>
+   <div class="modal-actions"><button type="button" class="primary-action" id="closeAbout">Fechar</button></div>`);
+ $('#closeAbout').addEventListener('click',closeModal);
+}
+function showNotifications(){const late=tasks.filter(t=>classification(t)==='overdue');modal(`<p class="section-overline">CENTRAL DE ALERTAS</p><h3 id="modalHeading">${late.length} horários ultrapassados</h3>${late.length?late.map(t=>{const p=getPatient(t.patient);return `<div class="prescription-row"><div><strong>${escapeHtml(t.title)}</strong><span>${escapeHtml(p.name)} · ${escapeHtml(p.bed)}</span></div><strong style="color:#d77c87">${timeOf(t)}</strong></div>`}).join(''):'<p>Não há horários ultrapassados nesta simulação.</p>'}<div class="modal-info">Alertas do protótipo são calculados na aba aberta. Eles não substituem protocolos assistenciais nem um serviço de notificações confiável.</div><div class="modal-actions"><button class="primary-action" type="button" id="closeNotifications">Entendi</button></div>`);$('#closeNotifications').addEventListener('click',closeModal)}
+function init(){
+ $('#topDate').textContent=fmtDay.format(new Date());
+ scene=new window.HospitalScene({canvas:$('#hospital3d'),motionCanvas:$('#sceneMotion'),stage:$('#sceneStage'),markers:$('#sceneMarkers'),onSelect:id=>selectPatient(id,{focus:true,inspect:true}),onRoomSelect:(room)=>openRoom(room),onChange:updateMapUI});
+ window.clinicaScene=scene;updateMetrics();renderPatient();renderTasks();
+ if(window.matchMedia('(max-width:500px)').matches)setSceneView('room');
+ updateMapUI();
+ $$('[data-scene-view]').forEach(b=>b.addEventListener('click',()=>setSceneView(b.dataset.sceneView)));
+ $$('[data-floor]').forEach(b=>b.addEventListener('click',()=>scene.setFloor(Number(b.dataset.floor))));
+ $('#backToFloor').addEventListener('click',()=>{closeInspector();setSceneView('floor');});
+ $('#toggleAnimation').addEventListener('click',()=>scene.animationToggle());
+ $('#forceCough').addEventListener('click',()=>{if(!scene.animationOn)scene.animationToggle();scene.triggerCough();});
+ $('#help3d').addEventListener('click',showAbout);
+ $('#aboutProject').addEventListener('click',showAbout);
+ $('#zoomIn').addEventListener('click',()=>scene.zoomBy(1.18));$('#zoomOut').addEventListener('click',()=>scene.zoomBy(.84));$('#resetCamera').addEventListener('click',()=>scene.reset());
+ $('#expandMap').addEventListener('click',()=>toggleExpanded());
+ $('#closeExpanded').addEventListener('click',()=>toggleExpanded(false));
+ $('#searchInput').addEventListener('input',e=>{searchTerm=e.target.value.toLowerCase().trim();scene.setSearch(searchTerm);taskVisible=5;renderTasks();});
+ $$('[data-task-filter]').forEach(b=>b.addEventListener('click',()=>{taskFilter=b.dataset.taskFilter;taskVisible=5;$$('[data-task-filter]').forEach(el=>el.classList.toggle('active',el===b));renderTasks();}));
+ $$('.side-item').forEach(b=>b.addEventListener('click',()=>{const dest=document.getElementById(b.dataset.nav);dest?.scrollIntoView({behavior:'smooth',block:'start'});$$('.side-item').forEach(el=>el.classList.toggle('active',el===b));}));
+ $('.notice-close').addEventListener('click',()=>{$('.notice').hidden=true;});
+ $('#notificationBtn').addEventListener('click',showNotifications);
+ $('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});
+ $('#inspectorScrim').addEventListener('click',closeInspector);
+ document.addEventListener('keydown',e=>{if(e.key==='Tab'&&!$('#patientInspector').hidden){
+   const dialog=$('#patientInspector .inspector-drawer');const focusable=[...dialog.querySelectorAll('button:not([disabled]), a[href]')].filter(n=>n.getClientRects().length);
+   if(focusable.length){const first=focusable[0],last=focusable[focusable.length-1];
+     if(e.shiftKey&&(document.activeElement===first||!dialog.contains(document.activeElement))){e.preventDefault();last.focus();}
+     else if(!e.shiftKey&&(document.activeElement===last||!dialog.contains(document.activeElement))){e.preventDefault();first.focus();}}
+ }if(e.key==='Escape'){if(!$('#patientInspector').hidden){closeInspector();return;}closeModal();if($('#sceneStage').classList.contains('expanded'))toggleExpanded(false);else if(scene.view==='room')setSceneView('floor');}});
+ let previousState=tasks.map(t=>classification(t)).join(',');setInterval(()=>{
+    updateCountdowns();const current=tasks.map(t=>classification(t)).join(',');
+    if(current!==previousState){previousState=current;updateMetrics();renderTasks();renderPatient();if(!$('#patientInspector').hidden)renderInspector(selected);}
+  },1000);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+  </script>
+</head>
+<body>
+  <svg aria-hidden="true" class="svg-defs" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></symbol>
+    <symbol id="icon-beds" viewBox="0 0 24 24"><path d="M3 4v16m0-5h18v5M6 15v-4a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v4m0-5h4a3 3 0 0 1 3 3v2"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7.5 3v4m9-4v4M3 10h18M7 14h4m-4 4h4"/></symbol>
+    <symbol id="icon-files" viewBox="0 0 24 24"><path d="M8 3h8l5 5v13H8zM16 3v5h5M3 8v13h13M11 12h6m-6 4h6"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 16v-5m5 5V7m5 9v-8"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M12 3l2 .7.7 2 2.1.5 1.8-1 2 3.4-1.5 1.4.2 2.1 1.6 1.4-2 3.4-1.9-1-2.1.6-.8 2H10l-.8-2-2.1-.5-1.8 1-2-3.4 1.5-1.4-.2-2.1L3 8.6l2-3.4 1.9 1 2.1-.6.8-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0v4c0 3-2 4-2 5h16c0-1-2-2-2-5V8ZM10 21h4"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="icon-caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="icon-rotate" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 7m-2 4v-7h7"/></symbol>
+    <symbol id="icon-maximize" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="icon-minus" viewBox="0 0 24 24"><path d="M4 12h16"/></symbol>
+    <symbol id="icon-activity" viewBox="0 0 24 24"><path d="M2 12h4l3-7 4 14 3-7h6"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="icon-droplet" viewBox="0 0 24 24"><path d="M12 2c-3 5-7 8-7 13a7 7 0 0 0 14 0C19 10 15 7 12 2Z"/></symbol>
+    <symbol id="icon-pill" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="8" transform="rotate(45 12 12)"/><path d="m7 17 10-10"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20 5.5c-2.3-2.3-5.3-1.5-8 1.6-2.7-3.1-5.7-3.9-8-1.6-2.5 2.5-1.5 6.1.4 8.2L12 21l7.6-7.3c1.9-2.1 2.9-5.7.4-8.2z"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 21 6v7c0 5-4 7.5-9 9-5-1.5-9-4-9-9V6z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="icon-trend" viewBox="0 0 24 24"><path d="m3 18 6-6 4 3 7-9m-5 0h5v5"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.5"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3zM12 9v5m0 3v.5"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0m2-16a3.5 3.5 0 0 1 0 7m1 3a5 5 0 0 1 4 5"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="m12 2 1.9 8.1L22 12l-8.1 1.9L12 22l-1.9-8.1L2 12l8.1-1.9z"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu principal">
+      <div class="brand" aria-label="Clínica SAÚDE"><div class="brand-mark"><span>+</span></div><div class="brand-copy">Clínica<span>SAÚDE</span></div></div>
+      <div class="side-divider"></div>
+      <nav class="side-nav">
+        <button class="side-item active" data-nav="overview" aria-label="Visão geral" title="Visão geral"><svg class="icon"><use href="#icon-grid"/></svg><span>Início</span></button>
+        <button class="side-item" data-nav="ward" aria-label="Mapa de leitos" title="Mapa de leitos"><svg class="icon"><use href="#icon-beds"/></svg><span>Leitos</span></button>
+        <button class="side-item" data-nav="agenda" aria-label="Agenda assistencial" title="Agenda assistencial"><svg class="icon"><use href="#icon-calendar"/></svg><span>Agenda</span></button>
+        <button class="side-item" data-nav="patientPanel" aria-label="Prontuário" title="Prontuário"><svg class="icon"><use href="#icon-files"/></svg><span>Ficha</span></button>
+        <button class="side-item" data-nav="insights" aria-label="Indicadores" title="Indicadores"><svg class="icon"><use href="#icon-chart"/></svg><span>Dados</span></button>
+      </nav>
+      <div class="sidebar-foot"><button class="help-dot" type="button" id="aboutProject" title="Sobre a Clínica SAÚDE e créditos" aria-label="Sobre o projeto e créditos">?</button><div class="staff-avatar" title="Equipe de enfermagem">EN</div></div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar" id="overview">
+        <div class="crumbs">Clínica SAÚDE <svg class="icon"><use href="#icon-chevron"/></svg> <strong>Central de cuidados</strong></div>
+        <div class="top-actions"><span class="demo-tag"><span></span> AMBIENTE DEMO</span><div class="datebox" id="topDate"></div><button class="icon-button notification-btn" type="button" id="notificationBtn" title="Ver alertas" aria-label="Ver alertas"><svg class="icon"><use href="#icon-bell"/></svg><i id="notificationDot"></i></button><span class="top-avatar">EN</span></div>
+      </header>
+
+      <main class="content">
+        <div class="page-intro"><div><p class="eyebrow"><span class="eyebrow-star">✦</span> PAINEL ASSISTENCIAL <span class="eyebrow-muted">/ CLÍNICA SAÚDE</span></p><h1>Tecnologia a serviço <span>do cuidado.</span></h1><p class="subtitle">Uma visão mais humana dos 36 leitos, com acompanhamento e ambientes 3D interativos.</p></div><div class="intro-right"><span class="hello-art" aria-hidden="true"><svg width="100" height="76" viewBox="0 0 100 76"><path d="M16 42c-10-16-4-29 9-34C39 3 51 13 58 27c7-18 23-21 34-11 11 9 8 29-7 40-17 14-37 15-56 5" fill="#c2e8fb"/><path d="M17 48c17-5 26-16 37-11 13 6 12 17 29 12" stroke="#78c0e9" stroke-width="7" stroke-linecap="round" fill="none"/><path d="m76 5 2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#a1d1f5"/><circle cx="12" cy="17" r="4" fill="#d4eefe"/></svg></span></div></div>
+        <div class="notice" role="status"><svg class="icon"><use href="#icon-info"/></svg><span><strong>Protótipo ilustrativo:</strong> pacientes, prescrições, valores e horários são fictícios. </span><button class="notice-close" type="button" aria-label="Ocultar aviso"><svg class="icon"><use href="#icon-x"/></svg></button></div>
+
+        <div class="primary-grid">
+          <section class="surface ward-section" id="ward" aria-label="Mapa 3D dos leitos">
+            <div class="section-title-row"><div><p class="section-overline"><span class="overline-dot"></span> AMBIENTES DA CLÍNICA</p><div class="section-title-group"><h2>Mapa dos leitos</h2><span class="header-badge">3D interativo <span class="badge-spark">✧</span></span></div><p class="section-subtitle">Clique em um quarto para consultar os pacientes ou em um leito para abrir a ficha individual.</p></div><button class="soft-icon-button" type="button" id="expandMap" title="Ampliar o mapa"><svg class="icon"><use href="#icon-maximize"/></svg></button></div>
+            <div class="map-toolbar"><label class="search-input"><svg class="icon"><use href="#icon-search"/></svg><input type="search" placeholder="Buscar nome ou leito..." id="searchInput" autocomplete="off" aria-label="Buscar paciente ou leito"></label><div class="view-toggle" role="group" aria-label="Exibição do mapa"><button type="button" data-scene-view="building" class="view-option">Prédio 3D</button><button type="button" data-scene-view="floor" class="view-option active">Andar inteiro</button><button type="button" data-scene-view="room" class="view-option">Quarto</button></div></div>
+            <div class="floor-bar" role="group" aria-label="Escolher andar">
+              <span class="floor-bar-label">ANDAR</span>
+              <button type="button" class="floor-btn active" data-floor="1"><span class="floor-emoji">01</span> 1º andar</button>
+              <button type="button" class="floor-btn" data-floor="2"><span class="floor-emoji">02</span> 2º andar</button>
+              <button type="button" class="floor-btn" data-floor="3"><span class="floor-emoji">03</span> 3º andar</button>
+              <span class="floor-count">6 quartos / andar</span>
+            </div>
+            <div class="scene-stage" id="sceneStage"><canvas id="hospital3d" aria-label="Mapa clínico tridimensional em 3D, com três andares, 18 quartos, 36 leitos e enfermeira sentada no posto. Arraste para girar, use a roda para zoom ou as setas do teclado."></canvas><canvas id="sceneMotion" aria-hidden="true"></canvas><div class="scene-shine" aria-hidden="true"></div><div class="scene-status-top"><span class="scene-loc" id="sceneLocation"><span class="location-dot"></span> 1º ANDAR <span class="location-slash">/</span> 6 QUARTOS</span><span class="drag-instruction">↗ Arraste para girar · role para aproximar</span></div><nav class="scene-fullscreen-nav" aria-label="Navegação entre os andares no mapa ampliado">
+                <button type="button" class="fullscreen-nav-btn fullscreen-building" data-scene-view="building" aria-pressed="false"><span class="fullscreen-nav-icon" aria-hidden="true">▦</span> Prédio inteiro</button>
+                <span class="fullscreen-nav-divider" aria-hidden="true"></span>
+                <button type="button" class="fullscreen-nav-btn" data-floor="1" aria-pressed="true">1º andar</button>
+                <button type="button" class="fullscreen-nav-btn" data-floor="2" aria-pressed="false">2º andar</button>
+                <button type="button" class="fullscreen-nav-btn" data-floor="3" aria-pressed="false">3º andar</button>
+              </nav><div class="scene-markers" id="sceneMarkers"></div><div class="cough-bubble" id="coughBubble" hidden>cof! <span>〰</span></div>
+              <div class="scene-navigation"><button class="scene-back" type="button" id="backToFloor" hidden>← Voltar ao andar</button><button class="scene-exit" type="button" id="closeExpanded" hidden>✕ Fechar ampliação</button></div><div class="scene-actions" aria-label="Controles do modelo 3D"><button class="scene-control" type="button" id="zoomIn" title="Aproximar" aria-label="Aproximar"><svg class="icon"><use href="#icon-plus"/></svg></button><button class="scene-control" type="button" id="zoomOut" title="Afastar" aria-label="Afastar"><svg class="icon"><use href="#icon-minus"/></svg></button><button class="scene-control" type="button" id="resetCamera" title="Reiniciar câmera" aria-label="Reiniciar câmera"><svg class="icon"><use href="#icon-rotate"/></svg></button></div><div class="scene-bottom-left"><span class="scene-legend"><i class="dot-ok"></i> Em dia</span><span class="scene-legend"><i class="dot-soon"></i> Próximo</span><span class="scene-legend"><i class="dot-overdue"></i> Atenção</span></div></div>
+            <div class="scene-toolline"><span class="nurse-status" id="nurseStatus">● Enfermeira no posto · pacientes em observação</span><div class="scene-toolbuttons"><button type="button" id="forceCough" class="animation-btn">♧ Simular tosse</button><button type="button" id="toggleAnimation" class="animation-btn" aria-pressed="true">Ⅱ Pausar animações dos pacientes</button><button type="button" id="help3d" class="animation-btn">? Sobre e controles 3D</button></div></div>
+            <div class="map-underbar"><span><svg class="icon"><use href="#icon-spark"/></svg> <strong>Clínica SAÚDE · Centro clínico</strong> · 3 andares, 18 quartos e 36 leitos · clique para explorar</span><span class="model-counter" id="modelCounter">6 quartos · 12 leitos</span></div>
+          </section>
+
+          <aside class="surface patient-section" id="patientPanel" aria-label="Ficha do paciente selecionado"><div id="patientContent"></div></aside>
+        </div>
+
+        <section class="metrics" aria-label="Indicadores do turno" id="insights">
+          <div class="metric metric-blue"><div class="metric-top"><span>Pacientes acompanhados</span><div class="metric-icon"><svg class="icon"><use href="#icon-users"/></svg></div></div><div class="metric-value" id="metricPatients">06</div><div class="metric-bottom"><span class="metric-note blue-dot">Distribuídos em 3 andares</span><span class="tiny-deco">✦</span></div></div>
+          <div class="metric metric-mint"><div class="metric-top"><span>Cuidados programados</span><div class="metric-icon"><svg class="icon"><use href="#icon-calendar"/></svg></div></div><div class="metric-value" id="metricTasks">18</div><div class="metric-bottom"><span class="metric-note mint-dot">Agenda deste plantão</span><span class="tiny-deco">✦</span></div></div>
+          <div class="metric metric-yellow"><div class="metric-top"><span>Próximos 30 minutos</span><div class="metric-icon"><svg class="icon"><use href="#icon-clock"/></svg></div></div><div class="metric-value" id="metricSoon">04</div><div class="metric-bottom"><span class="metric-note yellow-dot">Atenção aos horários</span><span class="tiny-deco">✦</span></div></div>
+          <div class="metric metric-rose"><div class="metric-top"><span>Precisam de atenção</span><div class="metric-icon"><svg class="icon"><use href="#icon-alert"/></svg></div></div><div class="metric-value" id="metricLate">02</div><div class="metric-bottom"><span class="metric-note rose-dot">Horários ultrapassados</span><span class="tiny-deco">✦</span></div></div>
+        </section>
+
+        <div class="bottom-grid">
+          <section class="surface agenda-section" id="agenda"><div class="section-title-row agenda-title-row"><div><p class="section-overline"><span class="overline-dot mint"></span> ORGANIZAÇÃO DO TURNO</p><h2>Próximos cuidados <span class="heading-deco">✳</span></h2><p class="section-subtitle">Acompanhe a programação simulada de medicações e procedimentos.</p></div><div class="agenda-tabs" role="group" aria-label="Filtro de cuidados"><button type="button" class="agenda-filter active" data-task-filter="all">Todos</button><button type="button" class="agenda-filter" data-task-filter="overdue">Atrasados</button><button type="button" class="agenda-filter" data-task-filter="done">Concluídos</button></div></div><div class="task-list" id="taskList"></div></section>
+          <aside class="surface team-section"><div class="section-title-row"><div><p class="section-overline"><span class="overline-dot purple"></span> EQUIPE ASSISTENCIAL</p><h2>Nosso plantão</h2></div><span class="team-live"><span></span> Em andamento</span></div><div class="staff-row"><span class="staff-pic pic-a">CM</span><div><strong>Carla Martins</strong><span>Enfermeira responsável</span></div><i class="staff-presence"></i></div><div class="staff-row"><span class="staff-pic pic-b">RF</span><div><strong>Rafael Ferreira</strong><span>Técnico de enfermagem</span></div><i class="staff-presence"></i></div><div class="staff-row"><span class="staff-pic pic-c">BL</span><div><strong>Beatriz Lima</strong><span>Técnica de enfermagem</span></div><i class="staff-presence"></i></div><div class="team-tip"><svg class="icon"><use href="#icon-heart"/></svg><p><strong>Cuidar também é antecipar.</strong> Consulte os alertas e confirme sempre a prescrição vigente.</p></div></aside>
+        </div>
+        <footer class="page-footer"><span>Clínica <span class="footer-blue">SAÚDE</span> · Central de cuidados</span><span>Conceito demonstrativo · Sem dados reais · Versão 9</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts" aria-live="polite"></div>
+  <div class="inspector-layer" id="patientInspector" hidden>
+    <button type="button" class="inspector-scrim" id="inspectorScrim" aria-label="Fechar visualização do paciente"></button>
+    <section class="inspector-drawer" role="dialog" aria-modal="true" aria-labelledby="inspectorTitle">
+      <div class="inspector-scroll" id="inspectorContent"></div>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal-content" id="modalContent" role="dialog" aria-modal="true" aria-labelledby="modalHeading"></div></div>
+</body>
+</html>
